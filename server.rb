@@ -3,7 +3,8 @@ require 'pry'
 require 'sinatra/json'
 require 'json'
 require 'pony'
-require 'dotenv/load'
+require 'dotenv'
+Dotenv.load
 
 get '/*' do
   send_file File.expand_path('index.html', settings.public_folder)
