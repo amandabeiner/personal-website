@@ -7,6 +7,7 @@ const SubjectField = props => {
         name={props.name}
         type='text'
         onChange={props.handlerFunction}
+        value={props.content}
       />
     </label>
   )

@@ -8,6 +8,7 @@ const BodyField = props => {
         type='text'
         name={props.name}
         onChange={props.handlerFunction}
+        value={props.content}
       />
     </label>
   )
