@@ -1,0 +1,39 @@
+.home {
+  margin-top: 5%;
+
+  .profile-photo{
+    max-width: 25%;
+    border-radius: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  h1{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 2em;
+    letter-spacing: 5px;
+  }
+
+  p{
+    color: white;
+    font-family: 'Lato';
+    font-size: 1.1em;
+    letter-spacing: 3px
+  }
+
+  .home-text{
+    max-width: 75%;
+    margin: auto;
+    margin-top: 3%;
+    text-align: center;
+  }
+
+  hr{
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 45%;
+}
+
+}

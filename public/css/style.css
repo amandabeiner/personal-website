@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+.home {
+  margin-top: 5%; }
+  .home .profile-photo {
+    max-width: 25%;
+    border-radius: 200px;
+    display: block;
+    margin: auto; }
+  .home h1 {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 2em;
+    letter-spacing: 5px; }
+  .home p {
+    color: white;
+    font-family: 'Lato';
+    font-size: 1.1em;
+    letter-spacing: 3px; }
+  .home .home-text {
+    max-width: 75%;
+    margin: auto;
+    margin-top: 3%;
+    text-align: center; }
+  .home hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 45%; }
+
+body {
+  background: url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fancy-Large-Images-For-Website-Background.jpg"); }
+
+/*# sourceMappingURL=style.css.map */
