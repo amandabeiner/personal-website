@@ -1,0 +1,15 @@
+.navbar .links li {
+  display: inline;
+  margin-right: 2%;
+  margin-top: 2%; }
+  .navbar .links li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px; }
+  .navbar .links li a:hover {
+    color: #008080; }
+
+/*# sourceMappingURL=navbar.css.map */

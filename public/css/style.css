@@ -28,6 +28,20 @@
     background: #ffffff;
     max-width: 45%; }
 
+.navbar .links li {
+  display: inline;
+  margin-right: 2%;
+  margin-top: 2%; }
+  .navbar .links li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 2px; }
+  .navbar .links li a:hover {
+    color: #008080; }
+
 body {
   background: url("http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fancy-Large-Images-For-Website-Background.jpg"); }
 
