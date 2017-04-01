@@ -126,6 +126,21 @@ table {
     .contact-section form .submit-button:hover {
       background-color: white;
       color: #008080; }
+    .contact-section form .error {
+      font-family: 'Lato';
+      font-size: 1.5em;
+      text-align: center;
+      list-style-type: none;
+      margin-top: 0.5em;
+      color: #008080; }
+    .contact-section form .success {
+      font-family: 'Lato';
+      font-size: 1.5em;
+      display: block;
+      text-align: center;
+      list-style-type: none;
+      margin-top: 0.7em;
+      color: #008080; }
 
 .pug-section {
   background-color: #D0C6C6;
