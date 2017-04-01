@@ -1,29 +1,35 @@
 .home {
-  margin-top: 5%; }
+  height: 100vh; }
   .home .profile-photo {
-    max-width: 25%;
+    max-width: 25vw;
     border-radius: 200px;
     display: block;
     margin: auto; }
+  @media (min-width: 450px) {
+    .home .image-wrapper {
+      padding-top: 15vh;
+      border-radius: 200px; } }
   .home h1 {
     color: white;
     font-family: 'Roboto';
-    font-size: 2em;
-    letter-spacing: 5px; }
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    padding-bottom: 2%; }
   .home p {
+    margin-top: 2%;
     color: white;
     font-family: 'Lato';
     font-size: 1.1em;
     letter-spacing: 3px; }
   .home .home-text {
-    max-width: 75%;
+    max-width: 75vw;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 3vh;
     text-align: center; }
   .home hr {
     border: 0;
     height: 1px;
     background: #ffffff;
-    max-width: 45%; }
+    max-width: 45vw; }
 
 /*# sourceMappingURL=home.css.map */

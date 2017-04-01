@@ -1,21 +1,33 @@
 .home {
-  margin-top: 5%;
+
+  height: 100vh;
 
   .profile-photo{
-    max-width: 25%;
+    max-width: 25vw;
     border-radius: 200px;
     display: block;
     margin: auto;
+
+  }
+
+  .image-wrapper{
+    @media(min-width: 450px){
+      padding-top:15vh;
+      border-radius: 200px;
+    }
+
   }
 
   h1{
     color: white;
     font-family: 'Roboto';
-    font-size: 2em;
+    font-size: 2.5em;
     letter-spacing: 5px;
+    padding-bottom: 2%;
   }
 
   p{
+    margin-top:2%;
     color: white;
     font-family: 'Lato';
     font-size: 1.1em;
@@ -23,9 +35,9 @@
   }
 
   .home-text{
-    max-width: 75%;
+    max-width: 75vw;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 3vh;
     text-align: center;
   }
 
@@ -33,7 +45,7 @@
     border: 0;
     height: 1px;
     background: #ffffff;
-    max-width: 45%;
+    max-width: 45vw;
 }
 
 }

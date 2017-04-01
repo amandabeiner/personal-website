@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import SubjectField from '../components/SubjectField';
 import BodyField from '../components/BodyField';
 
@@ -65,28 +66,36 @@ class ContactFormContainer extends Component {
 
   render(){
     return(
-      <form onSubmit={this.handleFormSubmit}>
-        <SubjectField
-          name='subject'
-          label='Subject'
-          content={this.state.subject}
-          handlerFunction={this.handleSubject}
-        />
-        <SubjectField
+      <div className="contact-section" >
+        <ScrollableAnchor id={'contact-section'}>
+          <h1>Contact</h1>
+        </ScrollableAnchor>
+        <form onSubmit={this.handleFormSubmit}>
+          <SubjectField
           name='email'
           label='Email'
+          placeholder='Your Email'
           content={this.state.email}
           handlerFunction={this.handleEmail}
-        />
-        <BodyField
-          name='body'
-          label='Body'
-          content={this.state.body}
-          handlerFunction={this.handleBody}
-        />
-        <input type="submit" value="Send!" />
-        <span>{this.state.success}</span>
-      </form>
+          />
+          <SubjectField
+            name='subject'
+            label='Subject'
+            placeholder='Subject'
+            content={this.state.subject}
+            handlerFunction={this.handleSubject}
+          />
+          <BodyField
+            name='body'
+            label='Body'
+            placeholder='Your message here!'
+            content={this.state.body}
+            handlerFunction={this.handleBody}
+          />
+          <input className="submit-button" type="submit" value="Send!" />
+          <span>{this.state.success}</span>
+        </form>
+      </div>
     );
   };
 };

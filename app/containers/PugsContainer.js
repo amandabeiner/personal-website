@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
+
 import Pug from '../components/Pug';
 
 class PugsContainer extends Component {
@@ -34,13 +36,20 @@ class PugsContainer extends Component {
     })
   }
 
+  // <ScrollableAnchor id={'pug-section'}>
 
   render(){
     return(
-      <Pug
-        gif={this.state.gifUrl}
-        onClick={this.getNewPugGif}
-      />
+        <div className='pug-section'>
+          <ScrollableAnchor id={'pug-section'}>
+            <div>
+              <Pug
+                gif={this.state.gifUrl}
+                onClick={this.getNewPugGif}
+              />
+            </div>
+          </ScrollableAnchor>
+        </div>
     )
   }
 }

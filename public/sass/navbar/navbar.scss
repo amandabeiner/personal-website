@@ -1,8 +1,15 @@
 .navbar{
+  margin-top: 3%;
+  .links{
+    position: fixed;
+    margin-left: 2%;
+  }
+
   .links li{
     display: inline;
-    margin-right: 2%;
+    margin-right: 5%;
     margin-top: 2%;
+
     a{
       text-decoration: none;
       color: white;
