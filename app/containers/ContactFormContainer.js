@@ -10,7 +10,8 @@ class ContactFormContainer extends Component {
       subject: '',
       body: '',
       email: '',
-      success: ''
+      success: '',
+      errors: {}
     };
 
     this.handleSubject = this.handleSubject.bind(this);
@@ -26,10 +27,12 @@ class ContactFormContainer extends Component {
   }
 
   handleBody(event){
+    this.validateBodyInput(event.target.value)
     this.setState({ body: event.target.value })
   }
 
   handleEmail(event){
+    this.validateEmailInput(event.target.value)
     this.setState({ email: event.target.value })
   }
 
@@ -37,16 +40,44 @@ class ContactFormContainer extends Component {
     this.setState({ subject: '', body: '', email: '' })
   }
 
+  validateEmailInput(input){
+    if (input === "" || input === " "){
+      let newError = { emailError: "Please enter your email" }
+      this.setState({ errors: Object.assign(this.state.errors, newError) })
+      return false
+    } else {
+      let errorState = this.state.errors
+      delete errorState.emailError
+      this.setState({ errors: errorState })
+      return true
+    }
+  }
+
+  validateBodyInput(input){
+    if (input === "" || input === " "){
+      let newError = { bodyError: "Please enter a message" }
+      this.setState({ errors: Object.assign(this.state.errors, newError) })
+      return false
+    } else {
+      let errorState = this.state.errors
+      delete errorState.bodyError
+      this.setState({ errors: errorState })
+      return true
+    }
+  }
+
   handleFormSubmit(event){
     event.preventDefault();
-    let formPayload = {
-      subject: this.state.subject,
-      body: this.state.body,
-      email: this.state.email
-    }
+    if(this.validateEmailInput(this.state.email) && this.validateBodyInput(this.state.body)){
+      let formPayload = {
+        subject: this.state.subject,
+        body: this.state.body,
+        email: this.state.email
+      }
 
-    this.sendEmail(formPayload);
-    this.clearForm();
+      this.sendEmail(formPayload);
+      this.clearForm();
+    }
   }
 
   sendEmail(formPayload){
@@ -65,6 +96,22 @@ class ContactFormContainer extends Component {
   }
 
   render(){
+    let errorDiv;
+    let errorItems;
+    let successSpan
+
+    if(Object.keys(this.state.errors).length > 0) {
+      errorItems = Object.values(this.state.errors).map(error => {
+        return(<li className="error" key={error}>{error}</li>)
+      })
+      errorDiv = <div>{errorItems}</div>
+    }
+
+    if(this.state.success != ''){
+      successSpan = <span className="success">{this.state.success}</span>
+    }
+
+
     return(
       <div className="contact-section" >
         <ScrollableAnchor id={'contact-section'}>
@@ -92,8 +139,9 @@ class ContactFormContainer extends Component {
             content={this.state.body}
             handlerFunction={this.handleBody}
           />
+          {errorDiv}
           <input className="submit-button" type="submit" value="Send!" />
-          <span>{this.state.success}</span>
+          {successSpan}
         </form>
       </div>
     );

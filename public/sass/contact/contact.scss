@@ -61,5 +61,24 @@
       background-color: white;
       color: #008080;
     }
+
+    .error{
+      font-family: 'Lato';
+      font-size: 1.5em;
+      text-align: center;
+      list-style-type: none;
+      margin-top: 0.5em;
+      color:#008080;
+    }
+
+    .success {
+      font-family: 'Lato';
+      font-size: 1.5em;
+      display: block;
+      text-align: center;
+      list-style-type: none;
+      margin-top: 0.7em;
+      color:#008080;
+    }
   }
 }

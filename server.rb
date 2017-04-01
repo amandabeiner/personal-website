@@ -13,7 +13,7 @@ post '/api/v1/contact' do
   data = JSON.parse(request.body.read)
   content_type :json
   status 200
-  success = { msg: "hello there i am success" }
+  success = { msg: "Thanks for your message!" }
 
   Pony.mail to: ENV['EMAIL'],
             from: data["email"],
