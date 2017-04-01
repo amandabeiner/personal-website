@@ -1,13 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { configureAnchors } from 'react-scrollable-anchor';
+
 const Navbar = props => {
+
+  configureAnchors({ keepLastAnchorHash: true });
+
+
   return(
-    <div>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
+    <div className="navbar">
+      <ul className="links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="#pug-section">Pugs</a></li>
         <li><a href='https://github.com/amandabeiner' target="_blank">GitHub</a></li>
-        <li><Link to='/contact'>Contact</Link></li>
-        <li><Link to='/pugs'>Pugs</Link></li>
       </ul>
       {props.children}
     </div>

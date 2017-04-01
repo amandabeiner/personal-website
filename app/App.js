@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
-import Home from './components/Home';
+
 import Navbar from './components/Navbar';
-import ContactFormContainer from './containers/ContactFormContainer';
-import PugsContainer from './containers/PugsContainer';
+import Content from './components/Content'
 
 
 class App extends Component {
@@ -16,13 +14,10 @@ class App extends Component {
 
   render() {
     return(
-      <Router history={browserHistory}>
-        <Route path='/' component={Navbar}>
-          <IndexRoute component={Home} />
-          <Route path='/contact' component={ContactFormContainer} />
-          <Route path='/pugs' component={PugsContainer} />
-        </Route>
-      </Router>
+      <div>
+        <Navbar />
+        <Content />
+      </div>
     )
   }
 }

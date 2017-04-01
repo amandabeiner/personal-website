@@ -1,0 +1,65 @@
+.contact-section{
+  background-color: #E4E8C6;
+  height: 100vh;
+
+  // margin: 0;
+
+  h1{
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    color: #008080;
+    letter-spacing: 5px;
+    text-align: center;
+    // padding-top: 5%;
+    padding-top: 5%;
+
+    @media(min-width: 500px){
+      // padding-top: 3rem;
+    }
+  }
+
+  form{
+    max-width: 70%;
+    margin: auto;
+
+    input{
+      border: none;
+      width: 100%;
+      display: block;
+      margin: 2%;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      letter-spacing: 1px;
+      color: #a5a5a5;
+    }
+
+    textarea{
+      border: none;
+      width: 100%;
+      display: block;
+      margin: 2%;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      height: 20rem;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      color: #a5a5a5;
+    }
+
+    .submit-button{
+      max-width: 40%;
+      background-color: #008080;
+      color: white;
+      margin:auto;
+      margin-top: 5%;
+      letter-spacing: 3px;
+    }
+
+    .submit-button:hover{
+      background-color: white;
+      color: #008080;
+    }
+  }
+}

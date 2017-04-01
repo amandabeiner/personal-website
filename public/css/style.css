@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.home {
+  height: 100vh; }
+  .home .profile-photo {
+    max-width: 25vw;
+    border-radius: 200px;
+    display: block;
+    margin: auto; }
+  @media (min-width: 450px) {
+    .home .image-wrapper {
+      padding-top: 15vh;
+      border-radius: 200px; } }
+  .home h1 {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    padding-bottom: 2%; }
+  .home p {
+    margin-top: 2%;
+    color: white;
+    font-family: 'Lato';
+    font-size: 1.1em;
+    letter-spacing: 3px; }
+  .home .home-text {
+    max-width: 75vw;
+    margin: auto;
+    margin-top: 3vh;
+    text-align: center; }
+  .home hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 45vw; }
+
+.navbar {
+  margin-top: 3%; }
+  .navbar .links {
+    position: fixed;
+    margin-left: 2%; }
+  .navbar .links li {
+    display: inline;
+    margin-right: 5%;
+    margin-top: 2%; }
+    .navbar .links li a {
+      text-decoration: none;
+      color: white;
+      font-family: 'Lato';
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 2px; }
+    .navbar .links li a:hover {
+      color: #008080; }
+
+.contact-section {
+  background-color: #E4E8C6;
+  height: 100vh; }
+  .contact-section h1 {
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    color: #008080;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 5%; }
+  .contact-section form {
+    max-width: 70%;
+    margin: auto; }
+    .contact-section form input {
+      border: none;
+      width: 100%;
+      display: block;
+      margin: 2%;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      letter-spacing: 1px;
+      color: #a5a5a5; }
+    .contact-section form textarea {
+      border: none;
+      width: 100%;
+      display: block;
+      margin: 2%;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      height: 20rem;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      color: #a5a5a5; }
+    .contact-section form .submit-button {
+      max-width: 40%;
+      background-color: #008080;
+      color: white;
+      margin: auto;
+      margin-top: 5%;
+      letter-spacing: 3px; }
+    .contact-section form .submit-button:hover {
+      background-color: white;
+      color: #008080; }
+
+.pug-section {
+  background-color: #D0C6C6;
+  height: 100vh; }
+  .pug-section img {
+    max-width: 50%;
+    display: block;
+    margin: auto;
+    padding-top: 7rem; }
+  .pug-section button {
+    border: none;
+    background-color: #6B5983;
+    padding: 2%;
+    display: block;
+    margin: 2rem auto;
+    font-family: 'Lato';
+    color: white;
+    font-size: 1em;
+    letter-spacing: 3px; }
+  .pug-section button:hover {
+    background-color: white;
+    color: #6B5983; }
+
+body {
+  background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw; }
+
+/*# sourceMappingURL=style.css.map */
