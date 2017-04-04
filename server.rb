@@ -4,7 +4,6 @@ require 'json'
 require 'pony'
 require 'dotenv'
 require 'sendgrid-ruby'
-require 'pry'
 Dotenv.load
 include SendGrid
 
