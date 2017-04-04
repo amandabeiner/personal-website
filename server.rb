@@ -3,7 +3,10 @@ require 'sinatra/json'
 require 'json'
 require 'pony'
 require 'dotenv'
+require 'sendgrid-ruby'
+require 'pry'
 Dotenv.load
+include SendGrid
 
 get '/*' do
   send_file File.expand_path('index.html', settings.public_folder)
@@ -13,12 +16,22 @@ post '/api/v1/contact' do
   data = JSON.parse(request.body.read)
   content_type :json
   status 200
-  success = { msg: "Thanks for your message!" }
 
-  Pony.mail to: ENV['EMAIL'],
-            from: data["email"],
-            subject: data["subject"],
-            body: data["body"]
+  from = Email.new(email: data['email'])
+  to = Email.new(email: ENV['EMAIL'])
+  subject = data['subject']
+  content = Content.new(type: 'text/plain', value: data['body'])
+  mail = SendGrid::Mail.new(from, subject, to, content)
 
-  json success
+  sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+  response = sg.client.mail._('send').post(request_body: mail.to_json)
+
+  if response.body.empty?
+    parsed_response_body = "success"
+  else
+    parsed_response_body = JSON.parse(response.body)
+  end
+
+  status response.status_code
+  json parsed_response_body
 end
