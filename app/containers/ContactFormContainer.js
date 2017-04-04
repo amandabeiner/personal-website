@@ -11,7 +11,8 @@ class ContactFormContainer extends Component {
       body: '',
       email: '',
       success: '',
-      errors: {}
+      errors: {},
+      apiError: ''
     };
 
     this.handleSubject = this.handleSubject.bind(this);
@@ -87,11 +88,16 @@ class ContactFormContainer extends Component {
       body: JSON.stringify(formPayload)
     })
     .then(response => {
-      let success = response.json();
-      return success
+      return response.json()
     })
     .then(response => {
-      this.setState({ success: response.msg })
+      if(response.errors){
+        let apiError
+         = response.errors[0].message
+        this.setState({ apiError: apiError, errors: {}, success: "" })
+      } else {
+        this.setState({ apiError: '', errors: {}, success: "Thanks for your message!" })
+      }
     })
   }
 
@@ -105,6 +111,8 @@ class ContactFormContainer extends Component {
         return(<li className="error" key={error}>{error}</li>)
       })
       errorDiv = <div>{errorItems}</div>
+    } else if (this.state.apiError != "") {
+      errorDiv = <div className="error">{this.state.apiError}</div>
     }
 
     if(this.state.success != ''){

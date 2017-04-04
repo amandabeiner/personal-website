@@ -49,7 +49,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    ruby_http_client (3.0.1)
     sass (3.4.23)
+    sendgrid-ruby (4.0.8)
+      ruby_http_client (~> 3.0.1)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -76,6 +79,7 @@ DEPENDENCIES
   pry
   rspec
   sass
+  sendgrid-ruby
   sinatra
   sinatra-activerecord
   sinatra-json

@@ -6,6 +6,7 @@ gem 'sinatra-json'
 gem 'json'
 gem 'pony'
 gem 'dotenv'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'sass'
