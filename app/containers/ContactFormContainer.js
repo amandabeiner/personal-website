@@ -77,7 +77,9 @@ class ContactFormContainer extends Component {
       }
 
       this.sendEmail(formPayload);
-      this.clearForm();
+      if(this.state.errors == {} && this.state.apiError == ''){
+        this.clearForm();
+      }
     }
   }
 

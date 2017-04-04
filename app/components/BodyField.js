@@ -9,6 +9,7 @@ const BodyField = props => {
       onChange={props.handlerFunction}
       value={props.content}
       placeholder={props.placeholder}
+      className="email-field"
     />
   )
 }

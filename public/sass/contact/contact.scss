@@ -1,8 +1,6 @@
 .contact-section{
   background-color: #E4E8C6;
-  height: 100vh;
-
-  // margin: 0;
+  min-height: 110vh;
 
   h1{
     font-family: 'Roboto';
@@ -10,19 +8,22 @@
     color: #008080;
     letter-spacing: 5px;
     text-align: center;
-    // padding-top: 5%;
+    padding-top: 8%;
     padding-top: 5%;
 
-    @media(min-width: 500px){
-      // padding-top: 3rem;
-    }
+    // @media(min-width: 500px){
+    //   padding-top: 3rem;
+    // }
   }
 
   form{
     max-width: 70%;
     margin: auto;
-
     input{
+      -webkit-appearance: none;
+    }
+
+    .email-field{
       border: none;
       width: 100%;
       display: block;
@@ -49,12 +50,19 @@
     }
 
     .submit-button{
-      max-width: 40%;
+      max-width: 35%;
       background-color: #008080;
       color: white;
       margin:auto;
-      margin-top: 5%;
       letter-spacing: 3px;
+      border: none;
+      border-radius: 0;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      width: 50%;
+      display: block;
+
     }
 
     .submit-button:hover{
@@ -67,8 +75,8 @@
       font-size: 1.5em;
       text-align: center;
       list-style-type: none;
-      margin-top: 0.5em;
       color:#008080;
+      margin-bottom: 1%;
     }
 
     .success {
@@ -77,8 +85,8 @@
       display: block;
       text-align: center;
       list-style-type: none;
-      margin-top: 0.7em;
       color:#008080;
+      margin-top: 1%;
     }
   }
 }
