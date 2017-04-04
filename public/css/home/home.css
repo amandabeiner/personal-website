@@ -1,14 +1,13 @@
 .home {
-  height: 100vh; }
+  min-height: 110vh; }
   .home .profile-photo {
     max-width: 25vw;
     border-radius: 200px;
     display: block;
     margin: auto; }
-  @media (min-width: 450px) {
-    .home .image-wrapper {
-      padding-top: 15vh;
-      border-radius: 200px; } }
+  .home .image-wrapper {
+    padding-top: 15vh;
+    border-radius: 200px; }
   .home h1 {
     color: white;
     font-family: 'Roboto';

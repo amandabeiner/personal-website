@@ -1,17 +1,20 @@
 .contact-section {
   background-color: #E4E8C6;
-  height: 100vh; }
+  min-height: 110vh; }
   .contact-section h1 {
     font-family: 'Roboto';
     font-size: 2.5em;
     color: #008080;
     letter-spacing: 5px;
     text-align: center;
+    padding-top: 8%;
     padding-top: 5%; }
   .contact-section form {
     max-width: 70%;
     margin: auto; }
     .contact-section form input {
+      -webkit-appearance: none; }
+    .contact-section form .email-field {
       border: none;
       width: 100%;
       display: block;
@@ -34,12 +37,18 @@
       font-family: 'Lato';
       color: #a5a5a5; }
     .contact-section form .submit-button {
-      max-width: 40%;
+      max-width: 35%;
       background-color: #008080;
       color: white;
       margin: auto;
-      margin-top: 5%;
-      letter-spacing: 3px; }
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 0;
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      width: 50%;
+      display: block; }
     .contact-section form .submit-button:hover {
       background-color: white;
       color: #008080; }
@@ -48,15 +57,15 @@
       font-size: 1.5em;
       text-align: center;
       list-style-type: none;
-      margin-top: 0.5em;
-      color: #008080; }
+      color: #008080;
+      margin-bottom: 1%; }
     .contact-section form .success {
       font-family: 'Lato';
       font-size: 1.5em;
       display: block;
       text-align: center;
       list-style-type: none;
-      margin-top: 0.7em;
-      color: #008080; }
+      color: #008080;
+      margin-top: 1%; }
 
 /*# sourceMappingURL=contact.css.map */
