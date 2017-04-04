@@ -75,11 +75,7 @@ class ContactFormContainer extends Component {
         body: this.state.body,
         email: this.state.email
       }
-
       this.sendEmail(formPayload);
-      if(this.state.errors == {} && this.state.apiError == ''){
-        this.clearForm();
-      }
     }
   }
 
@@ -99,6 +95,7 @@ class ContactFormContainer extends Component {
         this.setState({ apiError: apiError, errors: {}, success: "" })
       } else {
         this.setState({ apiError: '', errors: {}, success: "Thanks for your message!" })
+        this.clearForm();
       }
     })
   }
