@@ -1,11 +1,22 @@
 require 'sinatra'
+require 'sinatra/reloader'
+require 'sinatra/activerecord'
 require 'sinatra/json'
 require 'json'
 require 'pony'
 require 'dotenv'
 require 'sendgrid-ruby'
+require 'pry'
+
+require_relative 'models/project'
+also_reload 'models/project'
+
 Dotenv.load
 include SendGrid
+
+get '/api/v1/projects' do
+  binding.pry
+end
 
 get '/*' do
   send_file File.expand_path('index.html', settings.public_folder)
