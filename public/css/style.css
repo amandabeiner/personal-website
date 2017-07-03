@@ -88,16 +88,32 @@ table {
       color: #008080; }
 
 .contact-section {
-  background-color: #a5b0a4;
+  background-color: #aac8c9;
   min-height: 110vh; }
-  .contact-section h1 {
-    font-family: 'Roboto';
-    font-size: 2.5em;
-    color: #008080;
-    letter-spacing: 5px;
-    text-align: center;
-    padding-top: 8%;
-    padding-top: 5%; }
+  .contact-section .contact-header {
+    max-width: 70%;
+    margin: auto; }
+    .contact-section .contact-header h1 {
+      color: white;
+      text-align: right;
+      font-size: 2.25em;
+      font-family: 'Roboto';
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #888888;
+      padding-top: 2rem; }
+      @media screen and (max-width: 639px) {
+        .contact-section .contact-header h1 {
+          text-align: center; } }
+  .contact-section hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 40vw;
+    margin: 1rem auto 3rem;
+    box-shadow: .5px .5px #888888; }
+    @media screen and (min-width: 640px) {
+      .contact-section hr {
+        margin-right: 0; } }
   .contact-section form {
     max-width: 70%;
     margin: auto; }
@@ -221,8 +237,7 @@ table {
     font-weight: 0;
     font-family: 'Roboto';
     letter-spacing: 2px;
-    text-shadow: 1px 1px #888888;
-    margin-top: 2rem; }
+    text-shadow: 1px 1px #888888; }
     @media screen and (max-width: 639px) {
       .portfolio-section .portfolio-header {
         text-align: center;

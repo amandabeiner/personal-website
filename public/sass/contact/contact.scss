@@ -1,15 +1,40 @@
 .contact-section{
-  background-color: lighten(#849483, 12%);
+  background-color: #aac8c9;
   min-height: 110vh;
 
-  h1{
-    font-family: 'Roboto';
-    font-size: 2.5em;
-    color: #008080;
-    letter-spacing: 5px;
-    text-align: center;
-    padding-top: 8%;
-    padding-top: 5%;
+  .contact-header{
+    max-width: 70%;
+    margin: auto;
+
+    h1{
+      color: white;
+      text-align: right;
+      font-size: 2.25em;
+      font-family: 'Roboto';
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #888888;
+      padding-top: 2rem;
+
+      @media screen and (max-width: 639px) {
+        text-align: center;
+        // padding-right: 0;
+      }
+    }
+
+  }
+
+  hr{
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 40vw;
+    margin: 1rem auto 3rem;
+    box-shadow: .5px .5px #888888;
+
+
+    @media screen and (min-width: 640px){
+      margin-right: 0;
+    }
   }
 
   form{

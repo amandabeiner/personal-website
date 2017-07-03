@@ -121,9 +121,12 @@ class ContactFormContainer extends Component {
 
     return(
       <div className="contact-section" >
-        <ScrollableAnchor id={'contact-section'}>
-          <h1>Contact</h1>
-        </ScrollableAnchor>
+        <div className="contact-header">
+          <ScrollableAnchor id={'contact-section'}>
+              <h1>Contact</h1>
+          </ScrollableAnchor>
+          <hr></hr>
+        </div>
         <form onSubmit={this.handleFormSubmit}>
           <SubjectField
           name='email'
