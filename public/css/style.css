@@ -76,12 +76,13 @@ table {
       font-family: 'Lato';
       text-transform: uppercase;
       font-size: 1em;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #888888; }
     .navbar .links li a:hover {
       color: #008080; }
 
 .contact-section {
-  background-color: #E4E8C6;
+  background-color: #a5b0a4;
   min-height: 110vh; }
   .contact-section h1 {
     font-family: 'Roboto';
@@ -175,21 +176,38 @@ table {
 .portfolio-section {
   font-family: 'Roboto';
   color: white;
-  background-color: #a5b0a4;
+  background-color: #E4E8C6;
   padding: 10% 2%;
-  min-height: 110vh; }
+  min-height: 100vh; }
+  .portfolio-section .portfolio-tile {
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.5; }
+    .portfolio-section .portfolio-tile img {
+      margin-bottom: .25rem; }
   .portfolio-section .portfolio-header {
     color: white;
     text-align: right;
     padding-right: .9375rem;
-    font-size: 3em;
-    padding-bottom: 3rem; }
+    font-size: 2.25em;
+    font-weight: 0;
+    padding-bottom: 3rem;
+    font-family: 'Lato';
+    letter-spacing: 2px;
+    text-transform: uppercase; }
   .portfolio-section .icons {
-    font-size: 1.5em;
+    font-size: 1.75em;
     text-align: center;
     padding: .25rem; }
   .portfolio-section .fa {
-    margin: 0 1%; }
+    margin: 0 1%;
+    color: white; }
+    .portfolio-section .fa:hover {
+      color: #cccccc; }
+  .portfolio-section .project-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.25; }
 
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");

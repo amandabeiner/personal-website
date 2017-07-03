@@ -8,9 +8,12 @@ const ProjectTile = props => {
       <p className="project-description">{props.project.description}</p>
 
       <div className="icons">
-        <i className="fa fa-github" aria-hidden="true"></i>
-
-        <i className="fa fa-globe" aria-hidden="true"></i>
+        <a href={props.project.github_link} target="_blank">
+          <i className="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a href={props.project.web_link} target="_blank">
+          <i className="fa fa-globe" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   )
