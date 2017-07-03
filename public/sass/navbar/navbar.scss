@@ -1,14 +1,23 @@
 .navbar{
   margin: 3%;
+
   .links{
     position: fixed;
     margin-left: 2%;
+    z-index: 1;
+
+    @media screen and (max-width: 639px) {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
   }
 
   .links li{
     display: inline;
     margin-right: 5%;
     margin-top: 2%;
+
 
     a{
       text-decoration: none;
@@ -18,7 +27,6 @@
       font-size: 1em;
       letter-spacing: 2px;
       text-shadow: 1px 1px #888888;
-      z-index: 1;
     }
 
     a:hover{
