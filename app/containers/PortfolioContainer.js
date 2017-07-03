@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProjectTile from '../components/ProjectTile';
 
 class PortfolioContainer extends Component {
   constructor(props){
@@ -19,9 +20,17 @@ class PortfolioContainer extends Component {
   }
 
   render(){
+    let projects = this.state.projects.map(project => {
+      return(
+        <ProjectTile
+          project={project}
+          key={project.id}
+        />
+      )
+    })
     return(
       <div>
-        Dope Projects
+        {projects}
       </div>
     )
   }
