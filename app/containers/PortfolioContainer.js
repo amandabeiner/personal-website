@@ -8,6 +8,16 @@ class PortfolioContainer extends Component {
     }
   }
 
+  componentDidMount(){
+    fetch('/api/v1/projects')
+    .then(response => {
+      let projects = response.json()
+      return projects
+    }).then(projects => {
+      this.setState({ projects: projects })
+    })
+  }
+
   render(){
     return(
       <div>

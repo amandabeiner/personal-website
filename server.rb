@@ -15,7 +15,8 @@ Dotenv.load
 include SendGrid
 
 get '/api/v1/projects' do
-  binding.pry
+  projects = Project.all
+  json projects
 end
 
 get '/*' do
