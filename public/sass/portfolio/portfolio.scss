@@ -1,0 +1,25 @@
+.portfolio-section {
+  font-family: 'Roboto';
+  color: white;
+  background-color: lighten(#849483, 12%);
+  padding: 10% 2%;
+  min-height: 110vh;
+
+  .portfolio-header {
+    color: white;
+    text-align: right;
+    padding-right: .9375rem;
+    font-size: 3em;
+    padding-bottom: 3rem;
+  }
+
+  .icons {
+    font-size: 1.5em;
+    text-align: center;
+    padding: .25rem;
+  }
+
+  .fa {
+    margin: 0 1%;
+  }
+}

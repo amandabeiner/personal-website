@@ -172,24 +172,8 @@ table {
     background-color: white;
     color: #6B5983; }
 
-.portfolio-section {
-  font-family: 'Roboto';
-  color: white;
-  background-color: #a5b0a4;
-  padding: 10% 2%;
-  min-height: 110vh; }
-  .portfolio-section .portfolio-header {
-    color: white;
-    text-align: right;
-    padding-right: .9375rem;
-    font-size: 3em;
-    padding-bottom: 3rem; }
-  .portfolio-section .icons {
-    font-size: 1.5em;
-    text-align: center;
-    padding: .25rem; }
-  .portfolio-section .fa {
-    margin: 0 1%; }
+.portfolio-section h3 {
+  background-color: red; }
 
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");

@@ -29,8 +29,11 @@ class PortfolioContainer extends Component {
       )
     })
     return(
-      <div>
-        {projects}
+      <div className="portfolio-section">
+        <div className="row">
+          <h2 className='portfolio-header'>Portfolio</h2>
+          {projects}
+        </div>
       </div>
     )
   }
