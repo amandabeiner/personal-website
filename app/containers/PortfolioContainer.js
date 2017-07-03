@@ -31,13 +31,12 @@ class PortfolioContainer extends Component {
   }
 
   render(){
-    console.log(this.state.selectedProject)
-    let name, description;
     let projects = this.state.projects.map(project => {
       let onHover = () => {
         this.hoverProject(project.id)
       }
 
+      let name, description;
       if(project.id === this.state.selectedProject){
         name = project.name
         description = project.description

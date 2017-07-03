@@ -182,27 +182,32 @@ table {
   min-height: 100vh; }
   @media screen and (min-width: 800px) {
     .portfolio-section .row {
-      margin: 0 20%; } }
+      margin: 0 15%; } }
   .portfolio-section .portfolio-tile {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     letter-spacing: 1px;
     line-height: 1.5; }
+    @media screen and (max-width: 639px) {
+      .portfolio-section .portfolio-tile img {
+        border-bottom: 15px solid #008080; } }
     .portfolio-section .portfolio-tile .overlay {
       background-color: #008080;
       position: relative; }
-    .portfolio-section .portfolio-tile img {
-      margin-bottom: .25rem;
-      object-fit: cover;
-      width: 100%;
-      background-size: cover; }
-      .portfolio-section .portfolio-tile img:hover {
-        opacity: .4; }
-    .portfolio-section .portfolio-tile .project-text {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 25%;
-      text-align: center; }
+      .portfolio-section .portfolio-tile .overlay img {
+        margin-bottom: .25rem;
+        object-fit: cover;
+        width: 100%;
+        background-size: cover;
+        min-height: 100%; }
+        .portfolio-section .portfolio-tile .overlay img:hover {
+          opacity: .3; }
+      .portfolio-section .portfolio-tile .overlay .project-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30%;
+        text-align: center;
+        pointer-events: none; }
   .portfolio-section .portfolio-header {
     color: white;
     text-align: right;
@@ -211,6 +216,7 @@ table {
     font-weight: 0;
     font-family: 'Roboto';
     letter-spacing: 2px;
+    text-shadow: 1px 1px #888888;
     margin-top: 2rem; }
     @media screen and (max-width: 639px) {
       .portfolio-section .portfolio-header {
@@ -222,9 +228,9 @@ table {
     padding: .25rem; }
   .portfolio-section .fa {
     margin: 0 1%;
-    color: white; }
+    color: #008080; }
     .portfolio-section .fa:hover {
-      color: #008080; }
+      color: white; }
   .portfolio-section .project-name {
     font-weight: bold;
     font-size: 1.5em;
@@ -233,8 +239,9 @@ table {
     border: 0;
     height: 1px;
     background: #ffffff;
-    max-width: 45vw;
-    margin: 1rem auto 3rem; }
+    max-width: 40vw;
+    margin: 1rem auto 3rem;
+    box-shadow: .5px .5px #888888; }
     @media screen and (min-width: 640px) {
       .portfolio-section hr {
         margin-right: .9375rem; } }

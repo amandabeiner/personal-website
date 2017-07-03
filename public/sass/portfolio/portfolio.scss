@@ -7,41 +7,47 @@
 
   .row {
     @media screen and (min-width: 800px) {
-      margin: 0 20%;
+      margin: 0 15%;
     }
   }
 
   .portfolio-tile {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     letter-spacing: 1px;
     line-height: 1.5;
+
+    img {
+      @media screen and (max-width: 639px) {
+        border-bottom: 15px solid #008080;
+      }
+    }
 
     .overlay {
       background-color: #008080;
       position: relative;
-    }
 
-    img {
-      margin-bottom: .25rem;
-      object-fit: cover;
-      width: 100%;
-      background-size: cover;
-      // min-height: 100%;
+      img {
+        margin-bottom: .25rem;
+        object-fit: cover;
+        width: 100%;
+        background-size: cover;
+        min-height: 100%;
 
-      &:hover{
-        opacity: .4;
+        &:hover{
+          opacity: .3;
+        }
+      }
+
+      .project-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30%;
+        text-align: center;
+        pointer-events: none;
       }
     }
-
-    .project-text {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 25%;
-      text-align: center;
-    }
   }
-
 
   .portfolio-header {
     color: white;
@@ -51,6 +57,8 @@
     font-weight: 0;
     font-family: 'Roboto';
     letter-spacing: 2px;
+    text-shadow: 1px 1px #888888;
+
     // text-transform: uppercase;
     margin-top: 2rem;
 
@@ -68,10 +76,10 @@
 
   .fa {
     margin: 0 1%;
-    color: white;
+    color: #008080;
 
     &:hover {
-      color: #008080;
+      color: white;
     }
   }
 
@@ -85,8 +93,10 @@
     border: 0;
     height: 1px;
     background: #ffffff;
-    max-width: 45vw;
+    max-width: 40vw;
     margin: 1rem auto 3rem;
+    box-shadow: .5px .5px #888888;
+
 
     @media screen and (min-width: 640px){
       margin-right: .9375rem;
