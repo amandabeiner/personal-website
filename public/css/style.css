@@ -77,7 +77,8 @@ table {
       text-transform: uppercase;
       font-size: 1em;
       letter-spacing: 2px;
-      text-shadow: 1px 1px #888888; }
+      text-shadow: 1px 1px #888888;
+      z-index: 1; }
     .navbar .links li a:hover {
       color: #008080; }
 
@@ -179,22 +180,42 @@ table {
   background-color: #E4E8C6;
   padding: 10% 2%;
   min-height: 100vh; }
+  @media screen and (min-width: 800px) {
+    .portfolio-section .row {
+      margin: 0 20%; } }
   .portfolio-section .portfolio-tile {
     margin-bottom: 2rem;
     letter-spacing: 1px;
     line-height: 1.5; }
+    .portfolio-section .portfolio-tile .overlay {
+      background-color: #008080;
+      position: relative; }
     .portfolio-section .portfolio-tile img {
-      margin-bottom: .25rem; }
+      margin-bottom: .25rem;
+      object-fit: cover;
+      width: 100%;
+      background-size: cover; }
+      .portfolio-section .portfolio-tile img:hover {
+        opacity: .4; }
+    .portfolio-section .portfolio-tile .project-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      text-align: center; }
   .portfolio-section .portfolio-header {
     color: white;
     text-align: right;
     padding-right: .9375rem;
     font-size: 2.25em;
     font-weight: 0;
-    padding-bottom: 3rem;
-    font-family: 'Lato';
+    font-family: 'Roboto';
     letter-spacing: 2px;
-    text-transform: uppercase; }
+    margin-top: 2rem; }
+    @media screen and (max-width: 639px) {
+      .portfolio-section .portfolio-header {
+        text-align: center;
+        padding-right: 0; } }
   .portfolio-section .icons {
     font-size: 1.75em;
     text-align: center;
@@ -203,11 +224,20 @@ table {
     margin: 0 1%;
     color: white; }
     .portfolio-section .fa:hover {
-      color: #cccccc; }
+      color: #008080; }
   .portfolio-section .project-name {
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.25; }
+  .portfolio-section hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 45vw;
+    margin: 1rem auto 3rem; }
+    @media screen and (min-width: 640px) {
+      .portfolio-section hr {
+        margin-right: .9375rem; } }
 
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");

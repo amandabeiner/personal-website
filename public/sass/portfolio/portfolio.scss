@@ -5,15 +5,43 @@
   padding: 10% 2%;
   min-height: 100vh;
 
+  .row {
+    @media screen and (min-width: 800px) {
+      margin: 0 20%;
+    }
+  }
+
   .portfolio-tile {
     margin-bottom: 2rem;
     letter-spacing: 1px;
     line-height: 1.5;
 
+    .overlay {
+      background-color: #008080;
+      position: relative;
+    }
+
     img {
       margin-bottom: .25rem;
+      object-fit: cover;
+      width: 100%;
+      background-size: cover;
+      // min-height: 100%;
+
+      &:hover{
+        opacity: .4;
+      }
+    }
+
+    .project-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      text-align: center;
     }
   }
+
 
   .portfolio-header {
     color: white;
@@ -21,11 +49,15 @@
     padding-right: .9375rem;
     font-size: 2.25em;
     font-weight: 0;
-    padding-bottom: 3rem;
-    font-family: 'Lato';
+    font-family: 'Roboto';
     letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    margin-top: 2rem;
 
+    @media screen and (max-width: 639px) {
+      text-align: center;
+      padding-right: 0;
+    }
   }
 
   .icons {
@@ -39,7 +71,7 @@
     color: white;
 
     &:hover {
-      color: darken(white, 20%);
+      color: #008080;
     }
   }
 
@@ -47,5 +79,17 @@
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.25;
+  }
+
+  hr{
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 45vw;
+    margin: 1rem auto 3rem;
+
+    @media screen and (min-width: 640px){
+      margin-right: .9375rem;
+    }
   }
 }

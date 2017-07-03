@@ -5,8 +5,11 @@ class PortfolioContainer extends Component {
   constructor(props){
     super(props);
     this.state={
-      projects: []
+      projects: [],
+      slectedProject: null
     }
+    this.hoverProject = this.hoverProject.bind(this);
+    this.leaveProject = this.leaveProject.bind(this);
   }
 
   componentDidMount(){
@@ -19,11 +22,34 @@ class PortfolioContainer extends Component {
     })
   }
 
+  hoverProject(id){
+    this.setState({ selectedProject: id })
+  }
+
+  leaveProject(){
+    this.setState({ selectedProject: null })
+  }
+
   render(){
+    console.log(this.state.selectedProject)
+    let name, description;
     let projects = this.state.projects.map(project => {
+      let onHover = () => {
+        this.hoverProject(project.id)
+      }
+
+      if(project.id === this.state.selectedProject){
+        name = project.name
+        description = project.description
+      }
+
       return(
         <ProjectTile
           project={project}
+          name={name}
+          description={description}
+          handleHover={onHover}
+          handleLeave={this.leaveProject}
           key={project.id}
         />
       )
@@ -32,6 +58,7 @@ class PortfolioContainer extends Component {
       <div className="portfolio-section">
         <div className="row">
           <h2 className='portfolio-header'>Portfolio</h2>
+          <hr></hr>
           {projects}
         </div>
       </div>
