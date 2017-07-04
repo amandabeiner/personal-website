@@ -122,7 +122,7 @@ class ContactFormContainer extends Component {
     return(
       <div className="contact-section" >
         <div className="contact-header">
-          <ScrollableAnchor id={'contact-section'}>
+          <ScrollableAnchor id={'contact'}>
               <h1>Contact</h1>
           </ScrollableAnchor>
           <hr></hr>

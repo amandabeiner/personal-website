@@ -40,7 +40,7 @@ class PugsContainer extends Component {
     return(
         <div className='pug-section'>
           <div className="pug-header">
-            <ScrollableAnchor id={'pug-section'}>
+            <ScrollableAnchor id={'pugs'}>
               <h1>Pugs</h1>
             </ScrollableAnchor>
             <hr></hr>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProjectTile from '../components/ProjectTile';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 class PortfolioContainer extends Component {
   constructor(props){
@@ -56,7 +57,9 @@ class PortfolioContainer extends Component {
     return(
       <div className="portfolio-section">
         <div className="row">
-          <h2 className='portfolio-header'>Portfolio</h2>
+          <ScrollableAnchor id={'portfolio'}>
+            <h2 className='portfolio-header'>Portfolio</h2>
+          </ScrollableAnchor>
           <hr></hr>
           {projects}
         </div>
