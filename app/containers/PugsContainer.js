@@ -36,19 +36,21 @@ class PugsContainer extends Component {
     })
   }
 
-  // <ScrollableAnchor id={'pug-section'}>
-
   render(){
     return(
         <div className='pug-section'>
-          <ScrollableAnchor id={'pug-section'}>
-            <div>
-              <Pug
-                gif={this.state.gifUrl}
-                onClick={this.getNewPugGif}
-              />
-            </div>
-          </ScrollableAnchor>
+          <div className="pug-header">
+            <ScrollableAnchor id={'pug-section'}>
+              <h1>Pugs</h1>
+            </ScrollableAnchor>
+            <hr></hr>
+          </div>
+          <div>
+            <Pug
+              gif={this.state.gifUrl}
+              onClick={this.getNewPugGif}
+            />
+          </div>
         </div>
     )
   }

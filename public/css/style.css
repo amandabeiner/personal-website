@@ -101,7 +101,7 @@ table {
       font-family: 'Roboto';
       letter-spacing: 2px;
       text-shadow: 1px 1px #888888;
-      padding-top: 2rem; }
+      padding-top: 3rem; }
       @media screen and (max-width: 639px) {
         .contact-section .contact-header h1 {
           text-align: center; } }
@@ -181,11 +181,11 @@ table {
     max-width: 50%;
     display: block;
     margin: auto;
-    padding-top: 10rem; }
+    padding-top: 2rem; }
   .pug-section button {
     border: none;
     background-color: #6B5983;
-    padding: 1% 2%;
+    padding: 1% 2.5%;
     display: block;
     margin: 2rem auto;
     font-family: 'Lato';
@@ -195,13 +195,41 @@ table {
   .pug-section button:hover {
     background-color: white;
     color: #6B5983; }
+  .pug-section .pug-header {
+    max-width: 70%;
+    margin: auto; }
+    .pug-section .pug-header h1 {
+      color: white;
+      text-align: right;
+      font-size: 2.25em;
+      font-family: 'Roboto';
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #888888;
+      padding-top: 2rem; }
+      @media screen and (max-width: 639px) {
+        .pug-section .pug-header h1 {
+          text-align: center; } }
+  .pug-section hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    max-width: 40vw;
+    margin: 1rem auto 3rem;
+    box-shadow: .5px .5px #888888; }
+    @media screen and (min-width: 640px) {
+      .pug-section hr {
+        margin-right: 0; } }
 
 .portfolio-section {
   font-family: 'Roboto';
   color: white;
   background-color: #E4E8C6;
-  padding: 10% 2%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: relative; }
+  .portfolio-section .vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
   @media screen and (min-width: 800px) {
     .portfolio-section .row {
       margin: 0 15%; } }
@@ -231,6 +259,7 @@ table {
         text-align: center;
         pointer-events: none; }
   .portfolio-section .portfolio-header {
+    padding-top: 3rem;
     color: white;
     text-align: right;
     padding-right: .9375rem;
