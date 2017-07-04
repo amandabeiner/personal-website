@@ -6,7 +6,6 @@ require 'json'
 require 'pony'
 require 'dotenv'
 require 'sendgrid-ruby'
-require 'pry'
 
 require_relative 'models/project'
 also_reload 'models/project'
