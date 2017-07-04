@@ -17,7 +17,6 @@
 
       @media screen and (max-width: 639px) {
         text-align: center;
-        // padding-right: 0;
       }
     }
 
@@ -72,8 +71,8 @@
 
     .submit-button{
       max-width: 35%;
-      background-color: #008080;
-      color: white;
+      background-color: white;
+      color: #008080;
       margin:auto;
       letter-spacing: 3px;
       border: none;
@@ -87,8 +86,8 @@
     }
 
     .submit-button:hover{
-      background-color: white;
-      color: #008080;
+      background-color: #008080;
+      color: white;
     }
 
     .error{

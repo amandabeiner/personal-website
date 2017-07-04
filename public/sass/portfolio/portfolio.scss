@@ -2,8 +2,15 @@
   font-family: 'Roboto';
   color: white;
   background-color: #E4E8C6;
-  padding: 10% 2%;
+  // padding: 10% 2%;
   min-height: 100vh;
+  position: relative;
+
+  .vertical-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   .row {
     @media screen and (min-width: 800px) {

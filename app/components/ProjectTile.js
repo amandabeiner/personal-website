@@ -2,6 +2,12 @@ import React from 'react';
 
 
 const ProjectTile = props => {
+  let web_link;
+  if(props.project.web_link){
+    web_link = <a href={props.project.web_link} target="_blank">
+      <i className="fa fa-globe" aria-hidden="true"></i>
+    </a>
+  }
   return(
     <div className="portfolio-tile small-12 medium-6 columns" >
       <div className="overlay hide-for-small-only">
@@ -26,9 +32,7 @@ const ProjectTile = props => {
         <a href={props.project.github_link} target="_blank">
           <i className="fa fa-github" aria-hidden="true"></i>
         </a>
-        <a href={props.project.web_link} target="_blank">
-          <i className="fa fa-globe" aria-hidden="true"></i>
-        </a>
+        {web_link}
       </div>
     </div>
   )

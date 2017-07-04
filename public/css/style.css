@@ -85,7 +85,8 @@ table {
       letter-spacing: 2px;
       text-shadow: 1px 1px #888888; }
     .navbar .links li a:hover {
-      color: #008080; }
+      color: #008080;
+      text-shadow: none; }
 
 .contact-section {
   background-color: #aac8c9;
@@ -143,8 +144,8 @@ table {
       color: #a5a5a5; }
     .contact-section form .submit-button {
       max-width: 35%;
-      background-color: #008080;
-      color: white;
+      background-color: white;
+      color: #008080;
       margin: auto;
       letter-spacing: 3px;
       border: none;
@@ -155,8 +156,8 @@ table {
       width: 50%;
       display: block; }
     .contact-section form .submit-button:hover {
-      background-color: white;
-      color: #008080; }
+      background-color: #008080;
+      color: white; }
     .contact-section form .error {
       font-family: 'Lato';
       font-size: 1.5em;
