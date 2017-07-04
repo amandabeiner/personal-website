@@ -65,13 +65,7 @@ table {
   margin: 3%; }
   .navbar .links {
     position: fixed;
-    margin-left: 2%;
-    z-index: 1; }
-    @media screen and (max-width: 639px) {
-      .navbar .links {
-        width: 100%;
-        margin: auto;
-        text-align: center; } }
+    margin-left: 2%; }
   .navbar .links li {
     display: inline;
     margin-right: 5%;
@@ -82,39 +76,21 @@ table {
       font-family: 'Lato';
       text-transform: uppercase;
       font-size: 1em;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px #888888; }
+      letter-spacing: 2px; }
     .navbar .links li a:hover {
-      color: #008080;
-      text-shadow: none; }
+      color: #008080; }
 
 .contact-section {
-  background-color: #aac8c9;
+  background-color: #E4E8C6;
   min-height: 110vh; }
-  .contact-section .contact-header {
-    max-width: 70%;
-    margin: auto; }
-    .contact-section .contact-header h1 {
-      color: white;
-      text-align: right;
-      font-size: 2.25em;
-      font-family: 'Roboto';
-      letter-spacing: 2px;
-      text-shadow: 1px 1px #888888;
-      padding-top: 3rem; }
-      @media screen and (max-width: 639px) {
-        .contact-section .contact-header h1 {
-          text-align: center; } }
-  .contact-section hr {
-    border: 0;
-    height: 1px;
-    background: #ffffff;
-    max-width: 40vw;
-    margin: 1rem auto 3rem;
-    box-shadow: .5px .5px #888888; }
-    @media screen and (min-width: 640px) {
-      .contact-section hr {
-        margin-right: 0; } }
+  .contact-section h1 {
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    color: #008080;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 8%;
+    padding-top: 5%; }
   .contact-section form {
     max-width: 70%;
     margin: auto; }
@@ -144,8 +120,8 @@ table {
       color: #a5a5a5; }
     .contact-section form .submit-button {
       max-width: 35%;
-      background-color: white;
-      color: #008080;
+      background-color: #008080;
+      color: white;
       margin: auto;
       letter-spacing: 3px;
       border: none;
@@ -156,8 +132,8 @@ table {
       width: 50%;
       display: block; }
     .contact-section form .submit-button:hover {
-      background-color: #008080;
-      color: white; }
+      background-color: white;
+      color: #008080; }
     .contact-section form .error {
       font-family: 'Lato';
       font-size: 1.5em;
@@ -181,11 +157,11 @@ table {
     max-width: 50%;
     display: block;
     margin: auto;
-    padding-top: 2rem; }
+    padding-top: 10rem; }
   .pug-section button {
     border: none;
     background-color: #6B5983;
-    padding: 1% 2.5%;
+    padding: 1% 2%;
     display: block;
     margin: 2rem auto;
     font-family: 'Lato';
@@ -195,106 +171,9 @@ table {
   .pug-section button:hover {
     background-color: white;
     color: #6B5983; }
-  .pug-section .pug-header {
-    max-width: 70%;
-    margin: auto; }
-    .pug-section .pug-header h1 {
-      color: white;
-      text-align: right;
-      font-size: 2.25em;
-      font-family: 'Roboto';
-      letter-spacing: 2px;
-      text-shadow: 1px 1px #888888;
-      padding-top: 2rem; }
-      @media screen and (max-width: 639px) {
-        .pug-section .pug-header h1 {
-          text-align: center; } }
-  .pug-section hr {
-    border: 0;
-    height: 1px;
-    background: #ffffff;
-    max-width: 40vw;
-    margin: 1rem auto 3rem;
-    box-shadow: .5px .5px #888888; }
-    @media screen and (min-width: 640px) {
-      .pug-section hr {
-        margin-right: 0; } }
 
-.portfolio-section {
-  font-family: 'Roboto';
-  color: white;
-  background-color: #E4E8C6;
-  min-height: 100vh;
-  position: relative; }
-  .portfolio-section .vertical-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-  @media screen and (min-width: 800px) {
-    .portfolio-section .row {
-      margin: 0 15%; } }
-  .portfolio-section .portfolio-tile {
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    line-height: 1.5; }
-    @media screen and (max-width: 639px) {
-      .portfolio-section .portfolio-tile img {
-        border-bottom: 15px solid #008080; } }
-    .portfolio-section .portfolio-tile .overlay {
-      background-color: #008080;
-      position: relative; }
-      .portfolio-section .portfolio-tile .overlay img {
-        margin-bottom: .25rem;
-        object-fit: cover;
-        width: 100%;
-        background-size: cover;
-        min-height: 100%; }
-        .portfolio-section .portfolio-tile .overlay img:hover {
-          opacity: .3; }
-      .portfolio-section .portfolio-tile .overlay .project-text {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 30%;
-        text-align: center;
-        pointer-events: none; }
-  .portfolio-section .portfolio-header {
-    padding-top: 3rem;
-    color: white;
-    text-align: right;
-    padding-right: .9375rem;
-    font-size: 2.25em;
-    font-weight: 0;
-    font-family: 'Roboto';
-    letter-spacing: 2px;
-    text-shadow: 1px 1px #888888; }
-    @media screen and (max-width: 639px) {
-      .portfolio-section .portfolio-header {
-        text-align: center;
-        padding-right: 0; } }
-  .portfolio-section .icons {
-    font-size: 1.75em;
-    text-align: center;
-    padding: .25rem; }
-  .portfolio-section .fa {
-    margin: 0 1%;
-    color: #008080; }
-    .portfolio-section .fa:hover {
-      color: white; }
-  .portfolio-section .project-name {
-    font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1.25; }
-  .portfolio-section hr {
-    border: 0;
-    height: 1px;
-    background: #ffffff;
-    max-width: 40vw;
-    margin: 1rem auto 3rem;
-    box-shadow: .5px .5px #888888; }
-    @media screen and (min-width: 640px) {
-      .portfolio-section hr {
-        margin-right: .9375rem; } }
+.portfolio-section h3 {
+  background-color: red; }
 
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");
