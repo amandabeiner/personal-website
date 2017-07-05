@@ -1,4 +1,4 @@
-import Pug from './components/Pug';
+import Pug from '../../src/components/Pug';
 import { mount } from 'enzyme';
 
 describe('Pug', () => {
