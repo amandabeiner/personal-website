@@ -13,6 +13,8 @@ also_reload 'models/project'
 Dotenv.load
 include SendGrid
 
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+
 get '/api/v1/projects' do
   projects = Project.all
   json projects
