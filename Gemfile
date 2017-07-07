@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'sinatra-contribheroku'
+gem 'sinatra-contrib'
 gem 'pg'
 gem 'rake'
 gem 'sinatra-json'
