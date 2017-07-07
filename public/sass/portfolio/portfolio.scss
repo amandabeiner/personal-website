@@ -2,7 +2,6 @@
   font-family: 'Roboto';
   color: white;
   background-color: #E4E8C6;
-  // padding: 10% 2%;
   min-height: 100vh;
   position: relative;
 
@@ -92,6 +91,13 @@
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.25;
+    text-shadow: 1px 1px #888888;
+  }
+
+  .project-description {
+    @media screen and (max-width: 639px) {
+      color: lighten(#008080, 5%);
+    }
   }
 
   hr{
