@@ -1,9 +1,6 @@
 import React from 'react';
-// import { configureAnchors } from 'react-scrollable-anchor'
 import ScrollableAnchor from 'react-scrollable-anchor';
 
-
-// <ScrollableAnchor id={'home'}>
 const Home = props => {
   return(
       <div className="home">

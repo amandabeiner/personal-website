@@ -3,7 +3,6 @@ import Home from 'components/Home';
 import PortfolioContainer from 'containers/PortfolioContainer';
 import ContactFormContainer from 'containers/ContactFormContainer';
 import PugsContainer from 'containers/PugsContainer';
-import { mount } from 'enzyme';
 
 describe('Content', () => {
   let wrapper;
