@@ -62,7 +62,7 @@ module.exports = function(config) {
       },
 
       resolve: {
-        root: path.resolve(__dirname, 'src'),
+        modules: ['src', 'node_modules']
       }
     },
 

@@ -1,23 +1,16 @@
 var webpack = require('webpack');
 module.exports = {
-  entry: './app/src/main.js',
+  entry: __dirname + '/app/src/main.js',
   output: {
-    path: './public',
+    path: __dirname + '/public',
     filename: 'bundle.js'
-  },
-  resolve: {
-    root: __dirname,
-    alias: {
-
-    },
-    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       }
     ]
   },
