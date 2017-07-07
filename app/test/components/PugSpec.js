@@ -1,5 +1,5 @@
-import Pug from '../../src/components/Pug';
-import { mount } from 'enzyme';
+import Pug from 'components/Pug';
+// import { mount } from 'enzyme';
 
 describe('Pug', () => {
   let wrapper, onClickSpy;
