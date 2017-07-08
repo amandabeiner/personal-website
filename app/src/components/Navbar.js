@@ -15,7 +15,6 @@ const Navbar = props => {
         <li><a href="#pugs">Pugs</a></li>
         <li><a href='https://github.com/amandabeiner' target="_blank">GitHub</a></li>
       </ul>
-      {props.children}
     </div>
   );
 }

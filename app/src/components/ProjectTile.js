@@ -1,10 +1,9 @@
 import React from 'react';
 
-
 const ProjectTile = props => {
-  let web_link;
+  let webLink;
   if(props.project.web_link){
-    web_link = <a href={props.project.web_link} target="_blank">
+    webLink = <a href={props.project.web_link} target="_blank">
       <i className="fa fa-globe" aria-hidden="true"></i>
     </a>
   }
@@ -32,7 +31,7 @@ const ProjectTile = props => {
         <a href={props.project.github_link} target="_blank">
           <i className="fa fa-github" aria-hidden="true"></i>
         </a>
-        {web_link}
+        {webLink}
       </div>
     </div>
   )
