@@ -13,11 +13,17 @@ module.exports = function(config) {
       // use Babel polyfill to emulate a full ES6 environment in PhantomJS
       'node_modules/babel-polyfill/dist/polyfill.js',
       // entry file for Webpack
-      'app/test/testHelper.js'
+      'app/test/testHelper.js',
+
+      'node_modules/whatwg-fetch/fetch.js',
+
+      'app/test/fixtures/*.json'
     ],
 
     // before serving test/testHelper.js to the browser
     preprocessors: {
+      'app/test/fixtures/*.json': ['json_fixtures'],
+
       'app/test/testHelper.js': [
         // use karma-webpack to preprocess the file via webpack
         'webpack',
@@ -51,11 +57,7 @@ module.exports = function(config) {
             loader: 'isparta-loader'
           },
           {
-            test: /\.json$/,
-            include: [
-              /node_modules/,
-              path.resolve(__dirname, '..')
-            ],
+            include: /\.json$/,
             loader: 'json-loader'
           }
         ]
@@ -69,6 +71,10 @@ module.exports = function(config) {
     webpackMiddleware: {
       // do not output webpack build information to the browser's console
       noInfo: true
+    },
+
+    jsonFixturesPreprocessor: {
+      stripPrefix: 'app/test/fixtures/'
     },
 
     // test reporters that Karma should use
