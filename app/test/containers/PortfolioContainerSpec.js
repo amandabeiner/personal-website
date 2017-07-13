@@ -2,7 +2,7 @@ import PortfolioContainer from 'containers/PortfolioContainer';
 import ProjectTile from 'components/ProjectTile';
 
 describe('PortfolioContainer', () => {
-  let wrapper, hoverProject, leaveProject;
+  let wrapper;
 
   beforeEach(() => {
     spyOn(PortfolioContainer.prototype, 'hoverProject').and.callThrough();
