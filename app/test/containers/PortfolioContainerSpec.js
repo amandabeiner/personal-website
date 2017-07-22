@@ -75,7 +75,7 @@ describe('PortfolioContainer', () => {
       }, 0)
     })
 
-    it('should set the state of the PortfolioContainer back to null', done => {
+    xit('should set the state of the PortfolioContainer back to null', done => {
 
       setTimeout(() => {
         wrapper.find(ProjectTile).find('img').first().props().onMouseLeave()

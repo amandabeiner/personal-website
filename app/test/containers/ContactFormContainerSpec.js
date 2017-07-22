@@ -35,10 +35,21 @@ describe('ContactFormContainer', () => {
   })
 
   describe('handleSubject', () => {
-    it('should be called when the onChange function of the SubjectField component is invoked', () => {
-      wrapper.find(SubjectField).first().simulate('change')
-      expect(ContactFormContainer.prototype.handleSubject).toHaveBeenCalled();
-      console.log(wrapper.find(SubjectField).first().debug())
+    fit('should be called when the onChange function of the SubjectField component is invoked', () => {
+
+      let subjectField = wrapper.findWhere(n => {
+          return n.type() === 'input' && n.props().name === 'subject'
+        })
+
+      console.log(subjectField.length)
+      wrapper.find(subjectField).simulate('change')
+
+      console.log(subjectField.props().value)
+
+      // xexpect(ContactFormContainer.prototype.handleSubject).toHaveBeenCalled();
+      // simulate('change', {target: { value : '2020'}})
+      // console.log(ContactFormContainer.prototype.handleSubject())
+      // console.log(wrapper.find(SubjectField).first().debug())
       // expect(ContactFormContainer.prototype.handleSubject).toHavtoHaveBeenCalled();
       // console.log(wrapper.find(SubjectField).first().debug())
       // console.log(wrapper.childAt(2))
