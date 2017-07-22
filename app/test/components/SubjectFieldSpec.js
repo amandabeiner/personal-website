@@ -6,7 +6,7 @@ describe('SubjectField', () => {
   beforeEach(() => {
     handlerFunction = jasmine.createSpy('handlerFunction spy')
 
-    wrapper = mount(
+    wrapper = shallow(
       <SubjectField
         name='subject'
         label='Subject'

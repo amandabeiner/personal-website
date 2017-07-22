@@ -7,7 +7,7 @@ class PortfolioContainer extends Component {
     super(props);
     this.state={
       projects: [],
-      slectedProject: null
+      selectedProject: null
     }
     this.hoverProject = this.hoverProject.bind(this);
     this.leaveProject = this.leaveProject.bind(this);

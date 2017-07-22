@@ -5,7 +5,7 @@ describe('Pug', () => {
 
   beforeEach(() => {
     onClickSpy = jasmine.createSpy('onClickSpy')
-    wrapper = mount(
+    wrapper = shallow(
       <Pug
         gif={'pug-gif'}
         onClick={onClickSpy}

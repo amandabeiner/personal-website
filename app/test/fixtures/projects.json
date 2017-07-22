@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Pourmans Coffee",
+    "description": "Custom React/Redux/Rails web app for local coffee business",
+    "image": "http://res.cloudinary.com/dpuzgzqir/image/upload/v1499083880/Screen_Shot_2017-07-03_at_8.02.33_AM_da2qsr.png",
+    "web_link": "http://pourmans-coffee-staging.herokuapp.com",
+    "github_link": "http://github.com/michaelgt04/pourmans-coffee"
+  }
+]

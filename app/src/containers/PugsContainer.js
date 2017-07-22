@@ -13,15 +13,7 @@ class PugsContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=pug')
-    .then(response => {
-      let gif = response.json()
-      return gif
-    }).then(gif => {
-      this.setState({
-        gifUrl: gif.data.image_original_url
-      });
-    })
+    this.getNewPugGif();
   }
 
   getNewPugGif(){
