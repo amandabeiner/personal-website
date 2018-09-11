@@ -6,13 +6,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import 'pugs/pugs';
 @import 'portfolio/portfolio';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("https://fonts.googleapis.com/css?family=Roboto|Lato|Homemade+Apple");
 
 body{
-  background: url('http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg');
+  background: url('http://res.cloudinary.com/dpuzgzqir/image/upload/v1536632699/headshot_tncq4h.jpg');
   background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+//  background-attachment: fixed;
+ // height: 100vh;
   width: 100vw;
 }

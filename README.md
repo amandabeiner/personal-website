@@ -33,3 +33,9 @@ In a separate terminal tab, run:
   yarn
   yarn start
 ```
+
+To transform sass files, run:
+
+```no-highlight
+  sass --watch public/sass/style.scss:public/css/style.css
+```
