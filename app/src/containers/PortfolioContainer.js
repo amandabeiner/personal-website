@@ -9,8 +9,9 @@ class PortfolioContainer extends Component {
       projects: [],
       selectedProject: {}
     }
-    this.hoverProject = this.hoverProject.bind(this);
-    this.leaveProject = this.leaveProject.bind(this);
+
+    this.onClickNextProject     = this.onClickNextProject.bind(this)
+    this.onClickPreviousProject = this.onClickPreviousProject.bind(this)
   }
 
   componentDidMount(){
@@ -24,23 +25,48 @@ class PortfolioContainer extends Component {
       })
   }
 
-  hoverProject(id){
-    this.setState({ selectedProject: id })
+  getCurrentIndex() {
+    const { projects, selectedProject } = this.state
+    return projects.indexOf(selectedProject) 
   }
 
-  leaveProject(){
-    this.setState({ selectedProject: null })
+  validateNextProject() {
+    return this.getCurrentIndex() + 1  < this.state.projects.length
+  }
+
+  validatePreviousProject() {
+    return this.getCurrentIndex() - 1 >= 0
+  }
+
+  onClickNextProject() {
+    const index = this.getCurrentIndex()
+
+    if (this.validateNextProject()) {
+      this.setState({ selectedProject: this.state.projects[index + 1]})
+    }
+  }
+
+  onClickPreviousProject() {
+    const index = this.getCurrentIndex()
+
+    if(this.validatePreviousProject()) {
+      this.setState({ selectedProject: this.state.projects[index - 1]})
+    }
   }
 
   render(){
     const { selectedProject } = this.state
-    console.log(selectedProject)
 
     return (
       <div className="portfolio-section">
         <div className="carousel">
           <div className="carousel-arrow arrow-left">
-            <i className="fa fa-chevron-left"></i>
+            {this.validatePreviousProject() && (
+              <i
+                className="fa fa-chevron-left"
+                onClick={this.onClickPreviousProject}
+              ></i>
+            )}
           </div>
           <div className="carousel-body">
             <div className="image-container">
@@ -62,7 +88,12 @@ class PortfolioContainer extends Component {
             </div>
           </div>
           <div className="carousel-arrow arrow-right">
-            <i className="fa fa-chevron-right"></i>
+            {this.validateNextProject() && (
+              <i
+                className="fa fa-chevron-right"
+                onClick={this.onClickNextProject}
+              ></i>
+            )}
           </div>
         </div>
       </div>
