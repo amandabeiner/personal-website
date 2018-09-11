@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Lato|Homemade+Apple");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -29,19 +28,20 @@ table {
   border-spacing: 0; }
 
 .home {
-  min-height: 110vh; }
-  .home .profile-photo {
-    max-width: 25vw;
-    border-radius: 200px;
-    display: block;
-    margin: auto; }
-  .home .image-wrapper {
-    padding-top: 15vh;
-    border-radius: 200px; }
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 110vh;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .home .home-content {
+    margin-right: 2%;
+    text-align: center;
+    flex-basis: 55%;
+    text-align: center; }
   .home h1 {
     color: white;
-    font-family: 'Roboto';
-    font-size: 2.5em;
+    font-family: 'Homemade Apple', sans-serif;
+    font-size: 4rem;
     letter-spacing: 5px;
     padding-bottom: 2%;
     text-shadow: 1px 1px #888888; }
@@ -49,47 +49,51 @@ table {
     margin-top: 2%;
     color: white;
     font-family: 'Lato';
-    font-size: 1.1em;
-    letter-spacing: 3px;
-    text-shadow: 1px 1px #888888; }
-  .home .home-text {
-    max-width: 75vw;
-    margin: auto;
-    margin-top: 3vh;
-    text-align: center; }
+    font-size: 1.2em;
+    letter-spacing: 1px; }
   .home hr {
     border: 0;
     height: 1px;
     background: #ffffff;
     max-width: 45vw; }
 
-.navbar {
-  margin: 3%; }
-  .navbar .links {
+/*.navbar{
+  margin: 3%;
+
+  .links{
     position: fixed;
     margin-left: 2%;
-    z-index: 1; }
+    z-index: 1;
+
     @media screen and (max-width: 639px) {
-      .navbar .links {
-        width: 100%;
-        margin: auto;
-        text-align: center; } }
-  .navbar .links li {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .links li{
     display: inline;
     margin-right: 5%;
-    margin-top: 2%; }
-    .navbar .links li a {
+    margin-top: 2%;
+
+
+    a{
       text-decoration: none;
       color: white;
       font-family: 'Lato';
       text-transform: uppercase;
       font-size: 1em;
       letter-spacing: 2px;
-      text-shadow: 1px 1px #888888; }
-    .navbar .links li a:hover {
-      color: #008080;
-      text-shadow: none; }
+      text-shadow: 1px 1px #888888;
+    }
 
+    a:hover{
+      color: #008080;
+      text-shadow: none;
+    }
+  }
+} */
 .contact-section {
   background-color: #aac8c9;
   min-height: 110vh; }
@@ -303,10 +307,8 @@ table {
         margin-right: .9375rem; } }
 
 body {
-  background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1491066858/mobile_background_f3f4gn.jpg");
+  background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1536632699/headshot_tncq4h.jpg");
   background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
   width: 100vw; }
 
 /*# sourceMappingURL=style.css.map */
