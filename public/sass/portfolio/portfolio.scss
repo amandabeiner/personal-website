@@ -2,6 +2,7 @@
   background-color: $gray;
   font-family: 'Lato', sans-serif;
   color: white;
+  flex-wrap: wrap;
 
   min-height: 100vh;
   display: flex;
@@ -71,6 +72,28 @@
 
       &:hover {
         color: $yellow;
+      }
+    }
+  }
+
+  .progress-bar {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 2rem;
+
+    .circles {
+      display: flex;
+      flex-basis: 4%;
+      justify-content: space-between;
+      align-items: center;
+
+      .fa {
+        color: $yellow;
+      }
+
+      .fa-circle {
+        font-size: 1.25rem;
       }
     }
   }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProjectTile from '../components/ProjectTile';
 import ScrollableAnchor from 'react-scrollable-anchor';
 
 class PortfolioContainer extends Component {
@@ -54,6 +53,10 @@ class PortfolioContainer extends Component {
     }
   }
 
+  goToProject(project) {
+    this.setState({ selectedProject: project })
+  }
+
   render(){
     const { selectedProject } = this.state
 
@@ -94,6 +97,14 @@ class PortfolioContainer extends Component {
                 onClick={this.onClickNextProject}
               ></i>
             )}
+          </div>
+        </div>
+        <div className="progress-bar">
+          <div className="circles">
+            {this.state.projects.map(p => {
+              const selected = p.id === this.state.selectedProject.id ? 'fa-circle' : 'fa-circle-thin'
+              return <i className={`fa ${selected}`} key={p.id} onClick={() => this.goToProject(p)}></i>
+            })}
           </div>
         </div>
       </div>

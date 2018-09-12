@@ -244,6 +244,7 @@ table {
   background-color: #383838;
   font-family: 'Lato', sans-serif;
   color: white;
+  flex-wrap: wrap;
   min-height: 100vh;
   display: flex; }
   .portfolio-section .carousel {
@@ -285,6 +286,20 @@ table {
       transition: color .2s ease-in-out; }
       .portfolio-section .project-links .fa:hover {
         color: #FBD04D; }
+  .portfolio-section .progress-bar {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 2rem; }
+    .portfolio-section .progress-bar .circles {
+      display: flex;
+      flex-basis: 4%;
+      justify-content: space-between;
+      align-items: center; }
+      .portfolio-section .progress-bar .circles .fa {
+        color: #FBD04D; }
+      .portfolio-section .progress-bar .circles .fa-circle {
+        font-size: 1.25rem; }
 
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1536632699/headshot_tncq4h.jpg");
