@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
+import ProjectTile from '../components/ProjectTile'
 
 class PortfolioContainer extends Component {
   constructor(props){
@@ -57,6 +60,14 @@ class PortfolioContainer extends Component {
     this.setState({ selectedProject: project })
   }
 
+  transitionWrapper({ children }) {
+    return(
+      <div style={{ display: 'flex', flexBasis: '90%' }}>
+        {children}
+      </div>
+    )
+  }
+
   render(){
     const { selectedProject } = this.state
 
@@ -71,25 +82,22 @@ class PortfolioContainer extends Component {
               ></i>
             )}
           </div>
-          <div className="carousel-body">
-            <div className="image-container">
-              <img src={selectedProject.image} />
-            </div>
-            <div className="project-info">
-              <h3 className="project-name">{selectedProject.name}</h3>
-              <p className="project-description">{selectedProject.description}</p>
-              <div className="project-links">
-                <a href={selectedProject.github_link} target="_blank">
-                  <i className="fa fa-github" alt="View on Github"></i>
-                </a>
-                {selectedProject.web_link && (
-                  <a href={selectedProject.web_link} target="_blank">
-                    <i className="fa fa-globe" alt="View website"></i>
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
+          <TransitionGroup
+            component={this.transitionWrapper}
+          >
+            <CSSTransition
+              key={selectedProject.id}
+              classNames="slide"
+              timeout={10000}
+              onEnter={() => { console.log('onEnter') }}
+              onExit={() => { console.log('onExitsdf') }}
+              mountOnEnter
+            >
+              <ProjectTile
+                project={selectedProject}
+              />
+            </CSSTransition>
+          </TransitionGroup>
           <div className="carousel-arrow arrow-right">
             {this.validateNextProject() && (
               <i
