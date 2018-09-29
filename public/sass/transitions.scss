@@ -1,22 +1,22 @@
-@mixin transition-slide-right { transition: right 10000ms }
-@mixin transition-slide-left { transition: left 10000ms }
+@mixin transition-slide-right { transition: right 300ms }
+@mixin transition-slide-left { transition: left 300ms }
 
-.slide-enter {
+.slide-from-right-enter {
   right: -100%;
   position: relative;
 
-  &.slide-enter-active {
+  &.slide-from-right-enter-active {
     right: 0;
     @include transition-slide-right;
   }
 }
 
-.slide-exit {
+.slide-from-right-exit {
   position: relative;
-  left: 0;
+  left: -100%;
 
-  &.slide-exit-active {
-    left: -100%;
+  &.slide-from-right-exit-active {
+    left: -200%;
     @include transition-slide-left;
   }
 }

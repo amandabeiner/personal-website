@@ -9,7 +9,8 @@ class PortfolioContainer extends Component {
     super(props);
     this.state={
       projects: [],
-      selectedProject: {}
+      selectedProject: {},
+      slideFrom: 'right'
     }
 
     this.onClickNextProject     = this.onClickNextProject.bind(this)
@@ -44,7 +45,10 @@ class PortfolioContainer extends Component {
     const index = this.getCurrentIndex()
 
     if (this.validateNextProject()) {
-      this.setState({ selectedProject: this.state.projects[index + 1]})
+      this.setState({
+        selectedProject: this.state.projects[index + 1],
+        slideFrom: 'right'
+      })
     }
   }
 
@@ -52,7 +56,10 @@ class PortfolioContainer extends Component {
     const index = this.getCurrentIndex()
 
     if(this.validatePreviousProject()) {
-      this.setState({ selectedProject: this.state.projects[index - 1]})
+      this.setState({
+        selectedProject: this.state.projects[index - 1],
+        slideFrom: 'left'
+      })
     }
   }
 
@@ -62,14 +69,15 @@ class PortfolioContainer extends Component {
 
   transitionWrapper({ children }) {
     return(
-      <div style={{ display: 'flex', flexBasis: '90%' }}>
+      <div style={{ display: 'flex', flexBasis: '90%', overflow: 'hidden' }}>
         {children}
       </div>
     )
   }
 
   render(){
-    const { selectedProject } = this.state
+    const { selectedProject, slideFrom } = this.state
+    console.log(this.state.slideFrom)
 
     return (
       <div className="portfolio-section">
@@ -87,8 +95,8 @@ class PortfolioContainer extends Component {
           >
             <CSSTransition
               key={selectedProject.id}
-              classNames="slide"
-              timeout={10000}
+              classNames={`slide-from-${slideFrom}`}
+              timeout={300}
               onEnter={() => { console.log('onEnter') }}
               onExit={() => { console.log('onExitsdf') }}
               mountOnEnter

@@ -34,22 +34,22 @@ table {
   border-spacing: 0;
 }
 
-.slide-enter {
+.slide-from-right-enter {
   right: -100%;
   position: relative;
 }
-.slide-enter.slide-enter-active {
+.slide-from-right-enter.slide-from-right-enter-active {
   right: 0;
-  transition: right 10000ms;
+  transition: right 300ms;
 }
 
-.slide-exit {
+.slide-from-right-exit {
   position: relative;
-  left: 0;
-}
-.slide-exit.slide-exit-active {
   left: -100%;
-  transition: left 10000ms;
+}
+.slide-from-right-exit.slide-from-right-exit-active {
+  left: -200%;
+  transition: left 300ms;
 }
 
 .home {
