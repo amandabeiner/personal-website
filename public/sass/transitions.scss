@@ -11,6 +11,16 @@
   }
 }
 
+.slide-from-left-enter {
+  position: relative;
+  left: -100%;
+
+  &.slide-from-left-enter-active {
+    left: 0;
+    @include transition-slide-left;
+  }
+}
+
 .slide-from-right-exit {
   position: relative;
   left: -100%;
@@ -18,5 +28,15 @@
   &.slide-from-right-exit-active {
     left: -200%;
     @include transition-slide-left;
+  }
+}
+
+.slide-from-left-exit {
+  position: relative;
+  right: -100%;
+
+  &.slide-from-left-exit-active {
+    right: -200%;
+    @include transition-slide-right;
   }
 }

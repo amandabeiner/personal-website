@@ -64,7 +64,11 @@ class PortfolioContainer extends Component {
   }
 
   goToProject(project) {
-    this.setState({ selectedProject: project })
+    const targetIndex = this.state.projects.indexOf(project)
+    this.setState({
+      slideFrom: targetIndex > this.getCurrentIndex() ? 'right' : 'left',
+      selectedProject: project
+    })
   }
 
   transitionWrapper({ children }) {
@@ -77,7 +81,6 @@ class PortfolioContainer extends Component {
 
   render(){
     const { selectedProject, slideFrom } = this.state
-    console.log(this.state.slideFrom)
 
     return (
       <div className="portfolio-section">
@@ -92,14 +95,16 @@ class PortfolioContainer extends Component {
           </div>
           <TransitionGroup
             component={this.transitionWrapper}
+            childFactory={(child) => {
+              return React.cloneElement(child, { classNames: `slide-from-${slideFrom}` })
+            }}
           >
             <CSSTransition
               key={selectedProject.id}
               classNames={`slide-from-${slideFrom}`}
               timeout={300}
-              onEnter={() => { console.log('onEnter') }}
-              onExit={() => { console.log('onExitsdf') }}
               mountOnEnter
+              unmountOnExit
             >
               <ProjectTile
                 project={selectedProject}

@@ -43,6 +43,15 @@ table {
   transition: right 300ms;
 }
 
+.slide-from-left-enter {
+  position: relative;
+  left: -100%;
+}
+.slide-from-left-enter.slide-from-left-enter-active {
+  left: 0;
+  transition: left 300ms;
+}
+
 .slide-from-right-exit {
   position: relative;
   left: -100%;
@@ -50,6 +59,15 @@ table {
 .slide-from-right-exit.slide-from-right-exit-active {
   left: -200%;
   transition: left 300ms;
+}
+
+.slide-from-left-exit {
+  position: relative;
+  right: -100%;
+}
+.slide-from-left-exit.slide-from-left-exit-active {
+  right: -200%;
+  transition: right 300ms;
 }
 
 .home {
