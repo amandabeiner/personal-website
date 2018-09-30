@@ -124,43 +124,106 @@ table {
   max-width: 45vw;
 }
 
-/*.navbar{
-  margin: 3%;
+.portfolio-section {
+  background-color: #383838;
+  font-family: "Lato", sans-serif;
+  color: white;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  display: flex;
+}
+.portfolio-section .carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+.portfolio-section .carousel .carousel-arrow {
+  font-size: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.portfolio-section .carousel .carousel-arrow:hover {
+  color: #FBD04D;
+  cursor: pointer;
+}
+.portfolio-section .carousel .arrow-right:hover {
+  transform: translate(5px, 0);
+}
+.portfolio-section .carousel .arrow-left:hover {
+  transform: translate(-5px, 0);
+}
+.portfolio-section .project-tile {
+  display: flex;
+  align-items: center;
+  flex-basis: 90%;
+  flex-shrink: 0;
+}
+.portfolio-section .image-container {
+  flex-basis: 100%;
+}
+.portfolio-section .project-info {
+  flex-basis: 100%;
+  margin-left: 2%;
+}
+.portfolio-section .project-info .project-name {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+.portfolio-section .project-info .project-description {
+  line-height: 1.5;
+}
+.portfolio-section .project-links {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2%;
+}
+.portfolio-section .project-links .fa {
+  margin-right: 2%;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+.portfolio-section .project-links .fa:hover {
+  color: #FBD04D;
+}
+.portfolio-section .progress-bar {
+  flex-basis: 100%;
+  justify-content: center;
+  display: flex;
+  height: 2rem;
+}
+.portfolio-section .progress-bar .circles {
+  display: flex;
+  flex-basis: 4%;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio-section .progress-bar .circles .fa {
+  color: #FBD04D;
+}
+.portfolio-section .progress-bar .circles .fa-circle {
+  font-size: 1.25rem;
+}
 
-  .links{
-    position: fixed;
-    margin-left: 2%;
-    z-index: 1;
+.skills-section {
+  min-height: 100vh;
+  background-color: #FBD04D;
+}
+.skills-section .total-bar {
+  background-color: white;
+  height: 1rem;
+  width: 25%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.skills-section .filled-bar {
+  height: 0.9rem;
+  background-color: black;
+  border-radius: 50px;
+  margin-left: 0.1rem;
+}
 
-    @media screen and (max-width: 639px) {
-      width: 100%;
-      margin: auto;
-      text-align: center;
-    }
-  }
-
-  .links li{
-    display: inline;
-    margin-right: 5%;
-    margin-top: 2%;
-
-
-    a{
-      text-decoration: none;
-      color: white;
-      font-family: 'Lato';
-      text-transform: uppercase;
-      font-size: 1em;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px #888888;
-    }
-
-    a:hover{
-      color: #008080;
-      text-shadow: none;
-    }
-  }
-} */
 .contact-section {
   background-color: #aac8c9;
   min-height: 110vh;
@@ -320,86 +383,43 @@ table {
   }
 }
 
-.portfolio-section {
-  background-color: #383838;
-  font-family: "Lato", sans-serif;
-  color: white;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  display: flex;
-}
-.portfolio-section .carousel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5%;
-}
-.portfolio-section .carousel .carousel-arrow {
-  font-size: 2rem;
-  transition: all 0.2s ease-in-out;
-}
-.portfolio-section .carousel .carousel-arrow:hover {
-  color: #FBD04D;
-  cursor: pointer;
-}
-.portfolio-section .carousel .arrow-right:hover {
-  transform: translate(5px, 0);
-}
-.portfolio-section .carousel .arrow-left:hover {
-  transform: translate(-5px, 0);
-}
-.portfolio-section .project-tile {
-  display: flex;
-  align-items: center;
-  flex-basis: 90%;
-  flex-shrink: 0;
-}
-.portfolio-section .image-container {
-  flex-basis: 100%;
-}
-.portfolio-section .project-info {
-  flex-basis: 100%;
-  margin-left: 2%;
-}
-.portfolio-section .project-info .project-name {
-  font-size: 2.5rem;
-  line-height: 1.5;
-}
-.portfolio-section .project-info .project-description {
-  line-height: 1.5;
-}
-.portfolio-section .project-links {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 2%;
-}
-.portfolio-section .project-links .fa {
-  margin-right: 2%;
-  color: white;
-  transition: color 0.2s ease-in-out;
-}
-.portfolio-section .project-links .fa:hover {
-  color: #FBD04D;
-}
-.portfolio-section .progress-bar {
-  flex-basis: 100%;
-  justify-content: center;
-  display: flex;
-  height: 2rem;
-}
-.portfolio-section .progress-bar .circles {
-  display: flex;
-  flex-basis: 4%;
-  justify-content: space-between;
-  align-items: center;
-}
-.portfolio-section .progress-bar .circles .fa {
-  color: #FBD04D;
-}
-.portfolio-section .progress-bar .circles .fa-circle {
-  font-size: 1.25rem;
-}
+/*.navbar{
+  margin: 3%;
 
+  .links{
+    position: fixed;
+    margin-left: 2%;
+    z-index: 1;
+
+    @media screen and (max-width: 639px) {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  .links li{
+    display: inline;
+    margin-right: 5%;
+    margin-top: 2%;
+
+
+    a{
+      text-decoration: none;
+      color: white;
+      font-family: 'Lato';
+      text-transform: uppercase;
+      font-size: 1em;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px #888888;
+    }
+
+    a:hover{
+      color: #008080;
+      text-shadow: none;
+    }
+  }
+} */
 body {
   background: url("http://res.cloudinary.com/dpuzgzqir/image/upload/v1536632699/headshot_tncq4h.jpg");
   background-size: cover;

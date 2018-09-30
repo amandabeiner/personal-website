@@ -5,10 +5,12 @@ $gray:   #383838;
 
 @import 'transitions.scss';
 @import 'home/home';
-@import 'navbar/navbar';
+@import 'portfolio/portfolio';
+@import 'skills/skills';
+
 @import 'contact/contact';
 @import 'pugs/pugs';
-@import 'portfolio/portfolio';
+@import 'navbar/navbar';
 
 @import url("https://fonts.googleapis.com/css?family=Roboto|Lato|Homemade+Apple");
 

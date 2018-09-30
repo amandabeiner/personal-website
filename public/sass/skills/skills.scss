@@ -1,0 +1,22 @@
+.skills-section {
+  min-height: 100vh;
+  background-color: $yellow;
+
+  .total-bar {
+    background-color: white;
+    height: 1rem;
+    width: 25%;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .filled-bar {
+    height: 0.9rem;
+    background-color: black;
+    border-radius: 50px;
+    margin-left: 0.1rem;
+  }
+}
