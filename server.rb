@@ -16,7 +16,7 @@ include SendGrid
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb') if production?
 
 get '/api/v1/projects' do
-  projects = Project.all
+  projects = Project.all.order(:id)
   json projects
 end
 

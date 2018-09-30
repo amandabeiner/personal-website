@@ -1,116 +1,101 @@
 .portfolio-section {
-  font-family: 'Roboto';
+  background-color: $gray;
+  font-family: 'Lato', sans-serif;
   color: white;
-  background-color: #E4E8C6;
+  flex-wrap: wrap;
+
   min-height: 100vh;
-  position: relative;
+  display: flex;
 
-  .vertical-center{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+  .carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
 
-  .row {
-    @media screen and (min-width: 800px) {
-      margin: 0 15%;
-    }
-  }
+    .carousel-arrow {
+      font-size: 2rem;
+      transition: all 0.2s ease-in-out;
 
-  .portfolio-tile {
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    line-height: 1.5;
-
-    img {
-      @media screen and (max-width: 639px) {
-        border-bottom: 15px solid #008080;
+      &:hover {
+        color: $yellow;
+        cursor: pointer;
       }
     }
 
-    .overlay {
-      background-color: #008080;
-      position: relative;
-
-      img {
-        margin-bottom: .25rem;
-        object-fit: cover;
-        width: 100%;
-        background-size: cover;
-        min-height: 100%;
-
-        &:hover{
-          opacity: .3;
-        }
+    .arrow-right {
+      &:hover {
+        transform: translate(5px, 0);
       }
-
-      .project-text {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 30%;
-        text-align: center;
-        pointer-events: none;
+    }
+    
+    .arrow-left {
+      &:hover {
+        transform: translate(-5px, 0);
       }
     }
   }
 
-  .portfolio-header {
-    padding-top: 3rem;
-    color: white;
-    text-align: right;
-    padding-right: .9375rem;
-    font-size: 2.25em;
-    font-weight: 0;
-    font-family: 'Roboto';
-    letter-spacing: 2px;
-    text-shadow: 1px 1px #888888;
+  .project-tile {
+    display: flex;
+    align-items: center;
+    flex-basis: 90%;
+    flex-shrink: 0;
+  }
 
-    @media screen and (max-width: 639px) {
-      text-align: center;
-      padding-right: 0;
+  .image-container {
+    flex-basis: 100%
+  }
+
+  .project-info {
+    flex-basis: 100%;
+    margin-left: 2%;
+
+    .project-name {
+      font-size: 2.5rem;
+      line-height: 1.5;
+    }
+
+    .project-description {
+      line-height: 1.5;
     }
   }
 
-  .icons {
-    font-size: 1.75em;
+  .project-links {
+    font-size: 2rem;
     text-align: center;
-    padding: .25rem;
-  }
+    margin-top: 2%;
 
-  .fa {
-    margin: 0 1%;
-    color: #008080;
-
-    &:hover {
+    .fa {
+      margin-right: 2%;
       color: white;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 
-  .project-name {
-    font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1.25;
-    text-shadow: 1px 1px #888888;
-  }
+  .progress-bar {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 2rem;
 
-  .project-description {
-    @media screen and (max-width: 639px) {
-      color: lighten(#008080, 5%);
-    }
-  }
+    .circles {
+      display: flex;
+      flex-basis: 4%;
+      justify-content: space-between;
+      align-items: center;
 
-  hr{
-    border: 0;
-    height: 1px;
-    background: #ffffff;
-    max-width: 40vw;
-    margin: 1rem auto 3rem;
-    box-shadow: .5px .5px #888888;
+      .fa {
+        color: $yellow;
+      }
 
-
-    @media screen and (min-width: 640px){
-      margin-right: .9375rem;
+      .fa-circle {
+        font-size: 1.25rem;
+      }
     }
   }
 }

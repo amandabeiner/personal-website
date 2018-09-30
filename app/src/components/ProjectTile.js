@@ -1,40 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-const ProjectTile = props => {
-  let webLink;
-  if(props.project.web_link){
-    webLink = <a href={props.project.web_link} target="_blank">
-      <i className="fa fa-globe" aria-hidden="true"></i>
-    </a>
-  }
-  return(
-    <div className="portfolio-tile small-12 medium-6 columns" >
-      <div className="overlay hide-for-small-only">
-        <img onMouseEnter={props.handleHover} onMouseLeave={props.handleLeave} src={props.project.image}  />
-
-        <div className="project-text">
-          <h3 className="project-name">{props.name}</h3>
-          <p className="project-description">{props.description}</p>
-        </div>
+const ProjectTile = ({ project }) => {
+  return ( 
+    <div className="project-tile">
+      <div className="image-container">
+        <img src={project.image} />
       </div>
-
-      <div className="show-for-small-only">
-        <img onMouseEnter={props.handleHover} onMouseLeave={props.handleLeave} src={props.project.image}  />
-
-        <div className="project-text">
-          <h3 className="project-name">{props.project.name}</h3>
-          <p className="project-description">{props.project.description}</p>
+      <div className="project-info">
+        <h3 className="project-name">{project.name}</h3>
+        <p className="project-description">{project.description}</p>
+        <div className="project-links">
+          <a href={project.github_link} target="_blank">
+            <i className="fa fa-github" alt="View on Github"></i>
+          </a>
+          {project.web_link && (
+            <a href={project.web_link} target="_blank">
+              <i className="fa fa-globe" alt="View website"></i>
+            </a>
+          )}
         </div>
-      </div>
-
-      <div className="icons">
-        <a href={props.project.github_link} target="_blank">
-          <i className="fa fa-github" aria-hidden="true"></i>
-        </a>
-        {webLink}
       </div>
     </div>
   )
 }
 
-export default ProjectTile;
+export default ProjectTile
