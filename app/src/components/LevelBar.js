@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 const LevelBar = (props) => {
-  //cache
   return (
-    <div className="total-bar">
-      <div className="filled-bar"
-        style={{ width: `${props.width}%` }}
-      >
+    <div className="skill">
+      <h4 className="skill-name">{props.name}</h4>
+      <div className="total-bar">
+        <div className={`filled-bar ${props.name}`}>
+        </div>
       </div>
     </div>
   )
