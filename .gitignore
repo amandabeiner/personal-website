@@ -1,4 +1,6 @@
 public/bundle.js
+.sass-cache/*
+*.swp
 node_modules
 coverage
 .env
