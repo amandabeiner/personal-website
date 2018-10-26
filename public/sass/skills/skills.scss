@@ -1,0 +1,99 @@
+.skills-section {
+  $javascript: 80%;
+  $html: 85%;
+  $css: 75%;
+  $react: 90%;
+  $ruby: 60%;
+  $rails: 60%;
+
+  min-height: 100vh;
+  background-color: $yellow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15% 10%;
+
+  .skill {
+    flex-basis: 45%;
+
+    .skill-name {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+  }
+
+  .total-bar {
+    background-color: white;
+    height: 0.5rem;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .filled-bar {
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 50px;
+
+    &.visible {
+      &.JavaScript {
+        width: $javascript;
+        animation: javascript 2s linear;
+      }
+      
+      &.HTML5 {
+        width: $html;
+        animation: html 2s linear;
+      }
+      
+      &.CSS3 {
+        width: $css;
+        animation: css 2s linear;
+      }
+      
+      &.React {
+        width: $react;
+        animation: react 2s linear;
+      }
+      
+      &.Ruby {
+        width: $ruby;
+        animation: ruby 2s linear;
+      }
+      
+      &.Rails {
+        width: $rails;
+        animation: rails 2s linear;
+      }
+    }
+  }
+
+  @keyframes javascript {
+    0% { width: 0px }
+    100% { width: $javascript }
+  }
+
+  @keyframes html {
+    0% { width: 0px }
+    100% { width: $html }
+  }
+  
+  @keyframes css {
+    0% { width: 0px }
+    100% { width: $css }
+  }
+  @keyframes react {
+    0% { width: 0px }
+    100% { width: $react }
+  }
+  @keyframes ruby {
+    0% { width: 0px }
+    100% { width: $ruby }
+  }
+  @keyframes rails {
+    0% { width: 0px }
+    100% { width: $rails }
+  }
+}
