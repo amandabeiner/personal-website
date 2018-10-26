@@ -11,7 +11,6 @@ const Content = props => {
       <Home />
       <PortfolioContainer />
       <Skills />
-      <ContactFormContainer />
       <PugsContainer />
     </div>
   )

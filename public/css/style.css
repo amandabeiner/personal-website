@@ -183,25 +183,23 @@ table {
   .skills-section .filled-bar {
     height: 0.5rem;
     background-color: black;
-    border-radius: 50px;
-    width: 80%;
-    animation: javascript 2s linear; }
-    .skills-section .filled-bar.javascript {
+    border-radius: 50px; }
+    .skills-section .filled-bar.visible.JavaScript {
       width: 80%;
       animation: javascript 2s linear; }
-    .skills-section .filled-bar.HTML5 {
+    .skills-section .filled-bar.visible.HTML5 {
       width: 85%;
       animation: html 2s linear; }
-    .skills-section .filled-bar.CSS3 {
+    .skills-section .filled-bar.visible.CSS3 {
       width: 75%;
       animation: css 2s linear; }
-    .skills-section .filled-bar.React {
+    .skills-section .filled-bar.visible.React {
       width: 90%;
       animation: react 2s linear; }
-    .skills-section .filled-bar.Ruby {
+    .skills-section .filled-bar.visible.Ruby {
       width: 60%;
       animation: ruby 2s linear; }
-    .skills-section .filled-bar.Rails {
+    .skills-section .filled-bar.visible.Rails {
       width: 60%;
       animation: rails 2s linear; }
 @keyframes javascript {

@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-const LevelBar = (props) => {
-  return (
-    <div className="skill">
-      <h4 className="skill-name">{props.name}</h4>
-      <div className="total-bar">
-        <div className={`filled-bar ${props.name}`}>
-        </div>
+const LevelBar = ({ name, visible }) => (
+  <div className="skill">
+    <h4 className="skill-name">{name}</h4>
+    <div className="total-bar">
+      <div className={classNames('filled-bar', name, { visible })}>
       </div>
     </div>
-  )
-}
+  </div>
+
+)
 
 export default LevelBar

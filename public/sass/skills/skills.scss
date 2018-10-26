@@ -36,37 +36,37 @@
     height: 0.5rem;
     background-color: black;
     border-radius: 50px;
-    width: 80%;
-    animation: javascript 2s linear;
 
-    &.javascript {
-      width: $javascript;
-      animation: javascript 2s linear;
-    }
-    
-    &.HTML5 {
-      width: $html;
-      animation: html 2s linear;
-    }
-    
-    &.CSS3 {
-      width: $css;
-      animation: css 2s linear;
-    }
-    
-    &.React {
-      width: $react;
-      animation: react 2s linear;
-    }
-    
-    &.Ruby {
-      width: $ruby;
-      animation: ruby 2s linear;
-    }
-    
-    &.Rails {
-      width: $rails;
-      animation: rails 2s linear;
+    &.visible {
+      &.JavaScript {
+        width: $javascript;
+        animation: javascript 2s linear;
+      }
+      
+      &.HTML5 {
+        width: $html;
+        animation: html 2s linear;
+      }
+      
+      &.CSS3 {
+        width: $css;
+        animation: css 2s linear;
+      }
+      
+      &.React {
+        width: $react;
+        animation: react 2s linear;
+      }
+      
+      &.Ruby {
+        width: $ruby;
+        animation: ruby 2s linear;
+      }
+      
+      &.Rails {
+        width: $rails;
+        animation: rails 2s linear;
+      }
     }
   }
 
