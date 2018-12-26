@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 import SubjectField from '../components/SubjectField';
 import BodyField from '../components/BodyField';
 
@@ -122,9 +121,7 @@ class ContactFormContainer extends Component {
     return(
       <div className="contact-section" >
         <div className="contact-header">
-          <ScrollableAnchor id={'contact'}>
-              <h1>Contact</h1>
-          </ScrollableAnchor>
+            <h1>Contact</h1>
           <hr></hr>
         </div>
         <form onSubmit={this.handleFormSubmit}>

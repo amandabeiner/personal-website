@@ -1,10 +1,5 @@
 import React from 'react';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
-/* <ScrollableAnchor id={'home'}>
-          <div className="home-anchor">
-          </div>
-        </ScrollableAnchor> */
 const Home = props => {
   return (
     <div className="home">
