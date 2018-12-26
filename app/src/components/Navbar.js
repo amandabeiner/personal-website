@@ -1,11 +1,6 @@
 import React from 'react';
-import { configureAnchors } from 'react-scrollable-anchor';
 
 const Navbar = props => {
-
-  configureAnchors({ keepLastAnchorHash: true });
-
-
   return(
     <div className="navbar">
       <ul className="links">

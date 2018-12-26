@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Pug = props => {
-  return(
-    <div>
-      <img src={props.gif} />
-      <button onClick={props.onClick}>Next Pug</button>
-    </div>
-  );
-}
+const Pug = props => (
+  <Fragment>
+    <img src={props.gif} />
+    <button onClick={props.onClick}>fetch!</button>
+  </Fragment>
+)
 
-export default Pug;
+export default Pug
